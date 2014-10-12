@@ -1,0 +1,375 @@
+=======================================
+# of Hours of Knowledge Transfer :
+
+Networker Services :
+
+Networker Implementation
+Networker Upgrade Planning
+Networker Healthcheck
+Networker Upgrade
+
+Networker Activity Type : Design Implementation
+
+
+
+
+
+### NETWORKER DESIGN
+
+Select Networker Components to be Implemented
+
+Networker Server
+Networker Advanced Backup Technology
+Networker Storage Nodes
+Networker File System Client Backups
+Media Devices
+Networker Application Backups
+EMC Backup and Recovery Manager
+
+
+Select the Networker Implementation Environment
+
+ Select the Networker Implementation Environment : New Existing
+
+
+# of Networker Servers
+
+
+Select Networker Storage Node Types to Be Implemented
+
+Select Networker Storage Node Types to Be Implemented: Storage Node
+Select Networker Storage Node Types to Be Implemented: Dedicated Storage Node
+Select Networker Storage Node Types to Be Implemented: Avamar De-Duplication Node
+# of Networker Storage Nodes
+# of Networker Dedicated Storage Nodes
+# of Networker De-Duplication Nodes
+
+
+
+
+Select Networker Media Devices to be configured
+
+Select Networker Media Devices to be configured: Auto Changer
+Select Networker Media Devices to be configured: DD Boost
+Select Networker Media Devices to be configured: Tape Device
+Select Networker Media Devices to be configured: ATMOS
+Select Networker Media Devices to be configured: Advanced File Type Device
+# of Networker Auto Changers
+# of Networker Tape Devices
+# of Networker Advanced File Type Devices
+# of Networker DD Boost Devices
+# of Networker ATMOS Devices
+
+
+
+Select Networker Advanced Applications to be Backed Up
+
+Select Networker Advanced Applications to be Backed Up: SNMP
+Select Networker Advanced Applications to be Backed Up: VMWARE
+Select Networker Advanced Applications to be Backed Up: Snapshot Management
+Select Networker Advanced Applications to be Backed Up: NAS (Includes NDMP and Snapshot Management for NAS)
+Include Networker VMWare Protection Backups?
+# of VMWare vSphere Hosts
+# of VMWare Backup Appliances
+# of Networker Snapshot Management Application Hosts
+# of Networker Snapshot Management Mount Hosts
+# of NAS DataMovers to be Backed Up via NDMP
+
+
+
+# of Networker Clients (Windows / Unix / Linux)
+# of Networker Cluster Client Connections
+
+
+
+Select Applications to be Backed Up
+
+Select Applications to be Backed Up: Microsoft SQL
+Select Applications to be Backed Up: Microsoft Exchange
+Select Applications to be Backed Up: Microsoft Sharepoint
+Select Applications to be Backed Up: Microsoft Hyper-V
+Select Applications to be Backed Up: Oracle
+Select Applications to be Backed Up: MySQL
+Select Applications to be Backed Up: Lotus Notes
+Select Applications to be Backed Up: SAP
+
+
+Include Microsoft SQL Server Cluster?
+# of Microsoft SQL Servers
+# of SQL Databases
+
+Do you want Exchange Granular Backups to Be Implemented?
+Include Clustered Exchange Servers?
+# of Microsoft Exchange Mailbox Servers
+# of Microsoft Exchange Database Stores
+
+Data Domain Boost?
+Include Microsoft SQL Server Cluster?
+Include Granular SharePoint Backups?
+Include SharePoint Distrbuted Environment?
+# of Microsoft SQL Servers
+# of SQL Databases
+# of SharePoint Farms
+# of SharePoint Web Applications
+# of SharePoint Sites
+# of SharePoint Sub-Sites
+
+Data Domain Boost?
+Are any of the Hyper-V Environments Clustered?
+# of Microsoft Hyper-V Servers to be Backed Up with NMM
+Are there any clustered Oracle Servers to be backed up
+Include Extensive RMAN Scripting
+# of Oracle Database Servers for RMAN Backup
+# of Oracle Databases for Backup Configuration
+MySql Environment Clustered?
+# of MySQL Servers
+Are any of the Lotus Notes Applications Clustered
+# of IBM Lotus Domino Instances
+Is SAP Environment Clustered?
+# of SAP Applicaiton Servers
+
+============================================================
+### NETWORKER IMPLEMENTATION
+
+Select Networker Components to be Implemented
+
+Networker Server
+Networker Advanced Backup Technology
+Networker Storage Nodes
+Networker File System Client Backups
+Media Devices
+Networker Application Backups
+EMC Backup and Recovery Manager
+
+
+
+Select the Networker Implementation Environment
+
+Select the Networker Implementation Environment : New Existing
+
+# of Networker Servers
+# of Networker Management Consoles
+
+
+
+
+
+Select Networker Storage Node Types to Be Implemented
+
+Storage Node
+Dedicated Storage Node
+Avamar De-Duplication Node
+
+# of Networker Storage Nodes
+# of Networker Dedicated Storage Nodes
+# of Networker De-Duplication Nodes
+
+
+
+
+
+Select Networker Media Devices to be configured
+
+Auto Changer DD Boost
+Tape Device ATMOS
+Advanced File Type Device
+
+# of Networker Auto Changers
+# of Networker Tape Devices
+# of Networker Advanced File Type Devices
+# of Networker DD Boost Devices
+# of Networker ATMOS Devices
+
+
+
+
+
+
+Select Networker Advanced Applications to be Backed Up
+
+SNMP
+VMWARE
+Snapshot Management
+NAS (Includes NDMP and Snapshot Management for NAS)
+
+***  # of Networker SNMP Modules
+Include Networker VMWare Protection Backups?
+*** # of Virtual Machine Clients to be Backed Up using VMWare VADP
+# of VMWare Backup Appliances
+*** # of external Networker VMWare Protection Applianc
+# of Networker Snapshot Management Application Hosts
+# of Networker Snapshot Management Mount Hosts
+*** # of EMC Disk Arrays to be backed up with Networker Snapshot Management
+# of NAS DataMovers to be Backed Up via NDMP
+
+
+
+
+
+
+
+
+
+
+
+Networker Firewall Support?
+# of Networker Clients (Windows / Unix / Linux)
+# of Networker Cluster Client Connections
+
+
+
+
+
+
+
+
+
+Select Applications to be Backed Up
+
+ Microsoft SQL
+ Microsoft Exchange
+Microsoft Sharepoint
+Microsoft Hyper-V
+Oracle
+MySQL
+Lotus Notes
+SAP
+
+*** Include EMC VSS Hardware Provider
+*** # of Networker Modiule for Microsoft Proxy Nodes
+Include Microsoft SQL Server Cluster?
+*** # of Microsoft SQL Server Cluster Nodes
+# of Microsoft SQL Servers
+*** Include EMC VSS Hardware Provider
+*** # of Networker Modiule for Microsoft Proxy Nodes
+Do you want Exchange Granular Backups to Be Implemented?
+Include Clustered Exchange Servers?
+# of Microsoft Exchange Mailbox Servers
+# of Microsoft Exchange Database Stores
+*** Average Size in GB of Exchange Database Stores
+*** # of Exchange Cluster Nodes Included in this Engagement
+*** # of CCR Clusters Included in this Engagement
+
+*** Include EMC VSS Hardware Provider
+*** # of Networker Modiule for Microsoft Proxy Nodes
+Include Microsoft SQL Server Cluster?
+Include Granular SharePoint Backups?
+Include SharePoint Distrbuted Environment?
+*** # of Microsoft SQL Server Cluster Nodes
+# of Microsoft SQL Servers
+*** # of Physical Servers in SharePoint Environment
+# of SharePoint Farms
+# of SharePoint Web Applications
+# of SharePoint Sites
+# of SharePoint Sub-Sites
+
+*** Include EMC VSS Hardware Provider
+*** # of Networker Modiule for Microsoft Proxy Nodes
+Are any of the Hyper-V Environments Clustered?
+*** Will NMM be configured to backup an individual Hyper-V Machines?
+# of Microsoft Hyper-V Servers to be Backed Up with NMM
+*** # of physical servers in Hyper-V Cluster
+*** # of Hyper-V virtual machines to be backed up individually
+
+Are there any clustered Oracle Servers to be backed up
+*** # of Physical Servers in Oracle Environment
+# of Oracle Database Servers for RMAN Backup
+# of Oracle Databases for Backup Configuration
+
+MySql Environment Clustered?
+*** # of Physical Servers in MySQL Cluster
+# of MySQL Servers
+
+Are any of the Lotus Notes Applications Clustered
+*** # of Physical Lotus Notes Servers
+# of IBM Lotus Domino Instances
+
+Is SAP Environment Clustered?
+*** # of Physical Servers in the SAP Environment
+# of SAP Application Servers
+
+======================================================
+### NETWORKER UPGRADE
+
+Select Networker Components to be Upgraded
+
+Select Networker Components to be Upgraded: Networker Server
+Select Networker Components to be Upgraded: Networker Storage Nodes
+Select Networker Components to be Upgraded: Networker Clients
+Select Networker Components to be Upgraded: Networker Management Console
+
+
+Select the Current Networker Version : Networker 7.6
+Select the Current Networker Version : Networker 8.0
+Select the Networker Version to Upgrade to : Networker 8.0
+Select the Networker Version to Upgrade to : Networker 8.1
+Will the Networker Server Be Upgraded to New Hardware?
+# of Networker Servers to Be Upgraded
+
+
+
+
+# of Networker Storage Nodes to Be Upgraded
+# of Networker Clients to Be Upgraded
+# of Networker Management Consoles to Be Upgraded
+
+
+==================================================
+
+
+
+emcVSSHardwareProviderSelected1     |  emc_vss_hardware_provider_selected1      |  Include EMC VSS Hardware Provider?
+moduleForMsProxyNodes1              |  module_for_ms_proxy_nodes1               |  # of Networker Modiule for Microsoft Proxy Nodes
+msSQLSrvClusterSelected1            |  ms_sql_srv_cluster_selected1             |  Include Microsoft SQL Server Cluster?
+msSQLSrvClusterNodes1               |  ms_sql_srv_cluster_nodes1                |  # of Microsoft SQL Server Cluster Nodes
+msSQLSrvs1                          |  ms_sql_srvs1                             |  # of Microsoft SQL Servers
+
+emcVSSHardwareProviderSelected2     |  emc_vss_hardware_provider_selected2      |  Include EMC VSS Hardware Provider?
+moduleForMsProxyNodes2              |  module_for_ms_proxy_nodes2               |  # of Networker Modiule for Microsoft Proxy Nodes
+exchangeGranularBuSelected          |  exchange_granular_bu_selected            |  Do you want Exchange Granular Backups to Be Implemented?
+clusteredExchangeSrvsSelected       |  clustered_exchange_srvs_selected         |  Include Clustered Exchange Servers?
+msExchangeMailboxSrvs               |  ms_exchange_mailbox_srvs                 |  # of Microsoft Exchange Mailbox Servers
+msExchangeDatabaseStores            |  ms_exchange_database_stores              |  # of Microsoft Exchange Database Stores
+exchangeDatabaseStoresSelected      |  exchange_database_stores_selected        |  Average Size in GB of Exchange Database Stores?
+exchangeClusterNodesIncluded        |  exchange_cluster_nodes_included          |  # of Exchange Cluster Nodes Included in this Engage
+ccrClustersIncluded                 |  ccr_clusters_included                    |  # of CCR Clusters Included in this Engagement
+
+emcVSSHardwareProviderSelected3     |  emc_vss_hardware_provider_selected3      |  Include EMC VSS Hardware Provider?
+moduleForMsProxyNodes3              |  module_for_ms_proxy_nodes3               |  # of Networker Modiule for Microsoft Proxy Nodes
+msSQLSrvClusterSelected2            |  ms_sql_srv_cluster_selected2             |  Include Microsoft SQL Server Cluster?
+granularSharepointBuSelected        |  granular_sharepoint_bu_selected          |  Include Granular SharePoint Backups?
+sharepointDistributedEnvSelected    |  sharepoint_distributed_env_selected      |  Include SharePoint Distrbuted Environment?
+msSQLSrvClusterNodes2               |  ms_sql_srv_cluster_nodes2                |  # of Microsoft SQL Server Cluster Nodes
+msSQLSrvs2                          |  ms_sql_srvs2                             |  # of Microsoft SQL Servers
+physicalSrvsInSharepointEnv         |  physical_srvs_in_sharepoint_env          |  # of Physical Servers in SharePoint Environment
+sharepointFarms                     |  sharepoint_farms                         |  # of SharePoint Farms
+sharepointWebApps                   |  sharepoint_web_apps                      |  # of SharePoint Web Applications
+sharepointSites                     |  sharepoint_sites                         |  # of SharePoint Sites
+sharepointSubSites                  |  sharepoint_sub_sites                     |  # of SharePoint Sub-Sites
+
+emcVSSHardwareProviderSelected4     |  emc_vss_hardware_provider_selected4      |  Include EMC VSS Hardware Provider?
+moduleForMsProxyNodes4              |  module_for_ms_proxy_nodes4               |  # of Networker Modiule for Microsoft Proxy Nodes
+hyperVEnvsClusteredSelected         |  hyper_v_envs_clustered_selected          |  Are any of the Hyper-V Environments Clustered?
+buIndividualHyperVMachinesSelected  |  bu_individual_hyper_v_machines_selected  |  Will NMM be configured to backup an individual Hyper-V Machines?
+msHyperVSrvs                        |  ms_hyper_v_srvs                          |  # of Microsoft Hyper-V Servers to be Backed Up with NMM
+physicalSrvsInHyperVCluster         |  physical_srvs_in_hyper_v_cluster         |  # of physical servers in Hyper-V Cluster
+hyperVVMBuIndividually              |  hyper_vvm_bu_individually                |  # of Hyper-V virtual machines to be backed up individually
+
+clusteredOracleSrvsSelected         |  clustered_oracle_srvs_selected           |  Are there any clustered Oracle Servers to be backed up?
+physicalSrvsInOracleEnv             |  physical_srvs_in_oracle_env              |  # of Physical Servers in Oracle Environment
+oracleDatabaseSrvsForBu             |  oracle_database_srvs_for_bu              |  # of Oracle Database Servers for RMAN Backup
+oracleDatabasesForBuConf            |  oracle_databases_for_bu_conf             |  # of Oracle Databases for Backup Configuration
+
+mysqlEnvClusteredSelected           |  mysql_env_clustered_selected             |  MySql Environment Clustered?
+physicalSrvsInMySQLCluster          |  physical_srvs_in_my_sql_cluster          |  # of Physical Servers in MySQL Cluster
+mysqlSrvs                           |  mysql_srvs                               |  # of MySQL Servers
+
+lotusNotesAppsClusteredSelected     |  lotus_notes_apps_clustered_selected      |  Are any of the Lotus Notes Applications Clustered?
+physicalLotusNotesSrvs              |  physical_lotus_notes_srvs                |  # of Physical Lotus Notes Servers
+ibmLotusDominoInstances             |  ibm_lotus_domino_instances               |  # of IBM Lotus Domino Instances
+
+sapEnvClusteredSelected             |  sap_env_clustered_selected               |  Is SAP Environment Clustered?
+physicalSrvsInTheSAPEnv             |  physical_srvs_in_the_sap_env             |  # of Physical Servers in the SAP Environment
+sapApplicationSrvs                  |  sap_app_srvs                             |  # of SAP Applicaiton Servers
+
+

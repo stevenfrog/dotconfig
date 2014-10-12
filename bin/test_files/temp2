@@ -1,0 +1,647 @@
+
+========= package =================
+com.emc.gs.tools.srf.model.dpad
+
+========= class ===================
+NetworkerServer
+
+========= fields ==================
+Boolean  implEnvNewExisting
+Integer  networkerSrvs
+Integer  networkerMgmtConsoles
+
+----- com.emc.gs.tools.srf.model.dpad -----
+===== NetworkerServer =====
+Boolean  |  implEnvNewExisting     |  impl_env_new_existing    |  BOOLEAN
+Integer  |  networkerSrvs          |  networker_srvs           |  INT
+Integer  |  networkerMgmtConsoles  |  networker_mgmt_consoles  |  INT
+
+CREATE TABLE NetworkerServer (
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    impl_env_new_existing BOOLEAN,
+    networker_srvs INT,
+    networker_mgmt_consoles INT
+);
+
+
+
+
+========= package =================
+com.emc.gs.tools.srf.model.dpad
+
+========= class ===================
+NetworkerStorageNodes
+
+========= fields ==================
+Boolean  storageNodeSelected
+Boolean  dedicatedStorageNodeSelected
+Boolean  deDuplicationNodeSelected
+Integer  storageNodes
+Integer  dedicatedStorageNodes
+Integer  deDuplicationNodes
+
+----- com.emc.gs.tools.srf.model.dpad -----
+===== NetworkerStorageNodes =====
+Boolean  |  storageNodeSelected           |  storage_node_selected            |  BOOLEAN
+Boolean  |  dedicatedStorageNodeSelected  |  dedicated_storage_node_selected  |  BOOLEAN
+Boolean  |  deDuplicationNodeSelected     |  de_duplication_node_selected     |  BOOLEAN
+Integer  |  storageNodes                  |  storage_nodes                    |  INT
+Integer  |  dedicatedStorageNodes         |  dedicated_storage_nodes          |  INT
+Integer  |  deDuplicationNodes            |  de_duplication_nodes             |  INT
+
+CREATE TABLE NetworkerStorageNodes (
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    storage_node_selected BOOLEAN,
+    dedicated_storage_node_selected BOOLEAN,
+    de_duplication_node_selected BOOLEAN,
+    storage_nodes INT,
+    dedicated_storage_nodes INT,
+    de_duplication_nodes INT
+);
+
+
+
+
+========= package =================
+com.emc.gs.tools.srf.model.dpad
+
+========= class ===================
+NetworkerMediaDevices
+
+========= fields ==================
+Boolean  autoChangerSelected
+Boolean  ddBoostSelected
+Boolean  tapeDeviceSelected
+Boolean  atmosSelected
+Boolean  advancedFileTypeDeviceSelected
+Integer  autoChangers
+Integer  tapeDevices
+Integer  advancedFileTypeDevices
+Integer  ddBoostDevices
+Integer  atmosDevices
+
+----- com.emc.gs.tools.srf.model.dpad -----
+===== NetworkerMediaDevices =====
+Boolean  |  autoChangerSelected             |  auto_changer_selected               |  BOOLEAN
+Boolean  |  ddBoostSelected                 |  dd_boost_selected                   |  BOOLEAN
+Boolean  |  tapeDeviceSelected              |  tape_device_selected                |  BOOLEAN
+Boolean  |  atmosSelected                   |  atmos_selected                      |  BOOLEAN
+Boolean  |  advancedFileTypeDeviceSelected  |  advanced_file_type_device_selected  |  BOOLEAN
+Integer  |  autoChangers                    |  auto_changers                       |  INT
+Integer  |  tapeDevices                     |  tape_devices                        |  INT
+Integer  |  advancedFileTypeDevices         |  advanced_file_type_devices          |  INT
+Integer  |  ddBoostDevices                  |  dd_boost_devices                    |  INT
+Integer  |  atmosDevices                    |  atmos_devices                       |  INT
+
+CREATE TABLE NetworkerMediaDevices (
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    auto_changer_selected BOOLEAN,
+    dd_boost_selected BOOLEAN,
+    tape_device_selected BOOLEAN,
+    atmos_selected BOOLEAN,
+    advanced_file_type_device_selected BOOLEAN,
+    auto_changers INT,
+    tape_devices INT,
+    advanced_file_type_devices INT,
+    dd_boost_devices INT,
+    atmos_devices INT
+);
+
+
+
+
+========= package =================
+com.emc.gs.tools.srf.model.dpad
+
+========= class ===================
+NetworkerAdvancedBackupTechnology
+
+========= fields ==================
+Boolean  snmpSelected
+Boolean  vmwareSelected
+Boolean  snapshotMgmtSelected
+Boolean  nasSelected
+Integer  snmpModules
+Boolean  vmwareProtectionBuSelected
+Integer  virtualMachineClients
+Integer  vmwareVSphereHosts
+Integer  vmwareBuApps
+Integer  vmwareProtectionApp
+Integer  snapshotMgmtAppHosts
+Integer  snapshotMgmtMountHosts
+Integer  nas
+Integer  emcDiskArrays
+
+----- com.emc.gs.tools.srf.model.dpad -----
+===== NetworkerAdvancedBackupTechnology =====
+Boolean  |  snmpSelected                |  snmp_selected                  |  BOOLEAN
+Boolean  |  vmwareSelected              |  vmware_selected                |  BOOLEAN
+Boolean  |  snapshotMgmtSelected        |  snapshot_mgmt_selected         |  BOOLEAN
+Boolean  |  nasSelected                 |  nas_selected                   |  BOOLEAN
+Integer  |  snmpModules                 |  snmp_modules                   |  INT
+Boolean  |  vmwareProtectionBuSelected  |  vmware_protection_bu_selected  |  BOOLEAN
+Integer  |  virtualMachineClients       |  virtual_machine_clients        |  INT
+Integer  |  vmwareVSphereHosts          |  vmware_v_sphere_hosts          |  INT
+Integer  |  vmwareBuApps                |  vmware_bu_apps                 |  INT
+Integer  |  vmwareProtectionApp         |  vmware_protection_app          |  INT
+Integer  |  snapshotMgmtAppHosts        |  snapshot_mgmt_app_hosts        |  INT
+Integer  |  snapshotMgmtMountHosts      |  snapshot_mgmt_mount_hosts      |  INT
+Integer  |  nas                         |  nas                            |  INT
+Integer  |  emcDiskArrays               |  emc_disk_arrays                |  INT
+
+CREATE TABLE NetworkerAdvancedBackupTechnology (
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    snmp_selected BOOLEAN,
+    vmware_selected BOOLEAN,
+    snapshot_mgmt_selected BOOLEAN,
+    nas_selected BOOLEAN,
+    snmp_modules INT,
+    vmware_protection_bu_selected BOOLEAN,
+    virtual_machine_clients INT,
+    vmware_v_sphere_hosts INT,
+    vmware_bu_apps INT,
+    vmware_protection_app INT,
+    snapshot_mgmt_app_hosts INT,
+    snapshot_mgmt_mount_hosts INT,
+    nas INT,
+    emc_disk_arrays INT
+);
+
+
+
+
+========= package =================
+com.emc.gs.tools.srf.model.dpad
+
+========= class ===================
+NetworkerFileSystemClientBackups
+
+========= fields ==================
+Boolean  firewallSupportSelected
+Integer  clients
+Integer  clusterClientConns
+
+----- com.emc.gs.tools.srf.model.dpad -----
+===== NetworkerFileSystemClientBackups =====
+Boolean  |  firewallSupportSelected  |  firewall_support_selected  |  BOOLEAN
+Integer  |  clients                  |  clients                    |  INT
+Integer  |  clusterClientConns       |  cluster_client_conns       |  INT
+
+CREATE TABLE NetworkerFileSystemClientBackups (
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    firewall_support_selected BOOLEAN,
+    clients INT,
+    cluster_client_conns INT
+);
+
+
+
+
+========= package =================
+com.emc.gs.tools.srf.model.dpad
+
+========= class ===================
+NetworkerApplicationBackups
+
+========= fields ==================
+Boolean  msSQLSelected
+Boolean  msExchangeSelected
+Boolean  msSharepointSelected
+Boolean  msHyperVSelected
+Boolean  oracleSelected
+Boolean  mysqlSelected
+Boolean  lotusNotesSelected
+Boolean  sapSelected
+Boolean  emcVSSHardwareProviderSelected1
+Integer  moduleForMsProxyNodes1
+Boolean  msSQLSrvClusterSelected1
+Integer  msSQLSrvClusterNodes1
+Integer  msSQLSrvs1
+Integer  sqlDatabases1
+Boolean  emcVSSHardwareProviderSelected2
+Integer  moduleForMsProxyNodes2
+Boolean  exchangeGranularBuSelected
+Boolean  clusteredExchangeSrvsSelected
+Integer  msExchangeMailboxSrvs
+Integer  msExchangeDatabaseStores
+Boolean  exchangeDatabaseStoresSelected
+Integer  exchangeClusterNodesIncluded
+Integer  ccrClustersIncluded
+Boolean  emcVSSHardwareProviderSelected3
+Integer  moduleForMsProxyNodes3
+Boolean  dataDomainBoostSelected1
+Boolean  msSQLSrvClusterSelected2
+Boolean  granularSharepointBuSelected
+Boolean  sharepointDistributedEnvSelected
+Integer  msSQLSrvClusterNodes2
+Integer  msSQLSrvs2
+Integer  physicalSrvsInSharepointEnv
+Integer  sqlDatabases2
+Integer  sharepointFarms
+Integer  sharepointWebApps
+Integer  sharepointSites
+Integer  sharepointSubSites
+Boolean  emcVSSHardwareProviderSelected4
+Integer  moduleForMsProxyNodes4
+Boolean  dataDomainBoostSelected2
+Boolean  hyperVEnvsClusteredSelected
+Boolean  buIndividualHyperVMachinesSelected
+Integer  msHyperVSrvs
+Integer  physicalSrvsInHyperVCluster
+Integer  hyperVVMBuIndividually
+Boolean  clusteredOracleSrvsSelected
+Integer  physicalSrvsInOracleEnv
+Boolean  extensiveRMANScriptingSelected
+Integer  oracleDatabaseSrvsForBu
+Integer  oracleDatabasesForBuConf
+Boolean  mysqlEnvClusteredSelected
+Integer  physicalSrvsInMySQLCluster
+Integer  mysqlSrvs
+Boolean  lotusNotesAppsClusteredSelected
+Integer  physicalLotusNotesSrvs
+Integer  ibmLotusDominoInstances
+Boolean  sapEnvClusteredSelected
+Integer  physicalSrvsInTheSAPEnv
+Integer  sapApplicationSrvs
+
+----- com.emc.gs.tools.srf.model.dpad -----
+===== NetworkerApplicationBackups =====
+Boolean  |  msSQLSelected                       |  ms_sql_selected                          |  BOOLEAN
+Boolean  |  msExchangeSelected                  |  ms_exchange_selected                     |  BOOLEAN
+Boolean  |  msSharepointSelected                |  ms_sharepoint_selected                   |  BOOLEAN
+Boolean  |  msHyperVSelected                    |  ms_hyper_v_selected                      |  BOOLEAN
+Boolean  |  oracleSelected                      |  oracle_selected                          |  BOOLEAN
+Boolean  |  mysqlSelected                       |  mysql_selected                           |  BOOLEAN
+Boolean  |  lotusNotesSelected                  |  lotus_notes_selected                     |  BOOLEAN
+Boolean  |  sapSelected                         |  sap_selected                             |  BOOLEAN
+Boolean  |  emcVSSHardwareProviderSelected1     |  emc_vss_hardware_provider_selected1      |  BOOLEAN
+Integer  |  moduleForMsProxyNodes1              |  module_for_ms_proxy_nodes1               |  INT
+Boolean  |  msSQLSrvClusterSelected1            |  ms_sql_srv_cluster_selected1             |  BOOLEAN
+Integer  |  msSQLSrvClusterNodes1               |  ms_sql_srv_cluster_nodes1                |  INT
+Integer  |  msSQLSrvs1                          |  ms_sql_srvs1                             |  INT
+Integer  |  sqlDatabases1                       |  sql_databases1                           |  INT
+Boolean  |  emcVSSHardwareProviderSelected2     |  emc_vss_hardware_provider_selected2      |  BOOLEAN
+Integer  |  moduleForMsProxyNodes2              |  module_for_ms_proxy_nodes2               |  INT
+Boolean  |  exchangeGranularBuSelected          |  exchange_granular_bu_selected            |  BOOLEAN
+Boolean  |  clusteredExchangeSrvsSelected       |  clustered_exchange_srvs_selected         |  BOOLEAN
+Integer  |  msExchangeMailboxSrvs               |  ms_exchange_mailbox_srvs                 |  INT
+Integer  |  msExchangeDatabaseStores            |  ms_exchange_database_stores              |  INT
+Boolean  |  exchangeDatabaseStoresSelected      |  exchange_database_stores_selected        |  BOOLEAN
+Integer  |  exchangeClusterNodesIncluded        |  exchange_cluster_nodes_included          |  INT
+Integer  |  ccrClustersIncluded                 |  ccr_clusters_included                    |  INT
+Boolean  |  emcVSSHardwareProviderSelected3     |  emc_vss_hardware_provider_selected3      |  BOOLEAN
+Integer  |  moduleForMsProxyNodes3              |  module_for_ms_proxy_nodes3               |  INT
+Boolean  |  dataDomainBoostSelected1            |  data_domain_boost_selected1              |  BOOLEAN
+Boolean  |  msSQLSrvClusterSelected2            |  ms_sql_srv_cluster_selected2             |  BOOLEAN
+Boolean  |  granularSharepointBuSelected        |  granular_sharepoint_bu_selected          |  BOOLEAN
+Boolean  |  sharepointDistributedEnvSelected    |  sharepoint_distributed_env_selected      |  BOOLEAN
+Integer  |  msSQLSrvClusterNodes2               |  ms_sql_srv_cluster_nodes2                |  INT
+Integer  |  msSQLSrvs2                          |  ms_sql_srvs2                             |  INT
+Integer  |  physicalSrvsInSharepointEnv         |  physical_srvs_in_sharepoint_env          |  INT
+Integer  |  sqlDatabases2                       |  sql_databases2                           |  INT
+Integer  |  sharepointFarms                     |  sharepoint_farms                         |  INT
+Integer  |  sharepointWebApps                   |  sharepoint_web_apps                      |  INT
+Integer  |  sharepointSites                     |  sharepoint_sites                         |  INT
+Integer  |  sharepointSubSites                  |  sharepoint_sub_sites                     |  INT
+Boolean  |  emcVSSHardwareProviderSelected4     |  emc_vss_hardware_provider_selected4      |  BOOLEAN
+Integer  |  moduleForMsProxyNodes4              |  module_for_ms_proxy_nodes4               |  INT
+Boolean  |  dataDomainBoostSelected2            |  data_domain_boost_selected2              |  BOOLEAN
+Boolean  |  hyperVEnvsClusteredSelected         |  hyper_v_envs_clustered_selected          |  BOOLEAN
+Boolean  |  buIndividualHyperVMachinesSelected  |  bu_individual_hyper_v_machines_selected  |  BOOLEAN
+Integer  |  msHyperVSrvs                        |  ms_hyper_v_srvs                          |  INT
+Integer  |  physicalSrvsInHyperVCluster         |  physical_srvs_in_hyper_v_cluster         |  INT
+Integer  |  hyperVVMBuIndividually              |  hyper_vvm_bu_individually                |  INT
+Boolean  |  clusteredOracleSrvsSelected         |  clustered_oracle_srvs_selected           |  BOOLEAN
+Integer  |  physicalSrvsInOracleEnv             |  physical_srvs_in_oracle_env              |  INT
+Boolean  |  extensiveRMANScriptingSelected      |  extensive_rman_scripting_selected        |  BOOLEAN
+Integer  |  oracleDatabaseSrvsForBu             |  oracle_database_srvs_for_bu              |  INT
+Integer  |  oracleDatabasesForBuConf            |  oracle_databases_for_bu_conf             |  INT
+Boolean  |  mysqlEnvClusteredSelected           |  mysql_env_clustered_selected             |  BOOLEAN
+Integer  |  physicalSrvsInMySQLCluster          |  physical_srvs_in_my_sql_cluster          |  INT
+Integer  |  mysqlSrvs                           |  mysql_srvs                               |  INT
+Boolean  |  lotusNotesAppsClusteredSelected     |  lotus_notes_apps_clustered_selected      |  BOOLEAN
+Integer  |  physicalLotusNotesSrvs              |  physical_lotus_notes_srvs                |  INT
+Integer  |  ibmLotusDominoInstances             |  ibm_lotus_domino_instances               |  INT
+Boolean  |  sapEnvClusteredSelected             |  sap_env_clustered_selected               |  BOOLEAN
+Integer  |  physicalSrvsInTheSAPEnv             |  physical_srvs_in_the_sap_env             |  INT
+Integer  |  sapApplicationSrvs                  |  sap_app_srvs                             |  INT
+
+CREATE TABLE NetworkerApplicationBackups (
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    ms_sql_selected BOOLEAN,
+    ms_exchange_selected BOOLEAN,
+    ms_sharepoint_selected BOOLEAN,
+    ms_hyper_v_selected BOOLEAN,
+    oracle_selected BOOLEAN,
+    mysql_selected BOOLEAN,
+    lotus_notes_selected BOOLEAN,
+    sap_selected BOOLEAN,
+    emc_vss_hardware_provider_selected1 BOOLEAN,
+    module_for_ms_proxy_nodes1 INT,
+    ms_sql_srv_cluster_selected1 BOOLEAN,
+    ms_sql_srv_cluster_nodes1 INT,
+    ms_sql_srvs1 INT,
+    sql_databases1 INT,
+    emc_vss_hardware_provider_selected2 BOOLEAN,
+    module_for_ms_proxy_nodes2 INT,
+    exchange_granular_bu_selected BOOLEAN,
+    clustered_exchange_srvs_selected BOOLEAN,
+    ms_exchange_mailbox_srvs INT,
+    ms_exchange_database_stores INT,
+    exchange_database_stores_selected BOOLEAN,
+    exchange_cluster_nodes_included INT,
+    ccr_clusters_included INT,
+    emc_vss_hardware_provider_selected3 BOOLEAN,
+    module_for_ms_proxy_nodes3 INT,
+    data_domain_boost_selected1 BOOLEAN,
+    ms_sql_srv_cluster_selected2 BOOLEAN,
+    granular_sharepoint_bu_selected BOOLEAN,
+    sharepoint_distributed_env_selected BOOLEAN,
+    ms_sql_srv_cluster_nodes2 INT,
+    ms_sql_srvs2 INT,
+    physical_srvs_in_sharepoint_env INT,
+    sql_databases2 INT,
+    sharepoint_farms INT,
+    sharepoint_web_apps INT,
+    sharepoint_sites INT,
+    sharepoint_sub_sites INT,
+    emc_vss_hardware_provider_selected4 BOOLEAN,
+    module_for_ms_proxy_nodes4 INT,
+    data_domain_boost_selected2 BOOLEAN,
+    hyper_v_envs_clustered_selected BOOLEAN,
+    bu_individual_hyper_v_machines_selected BOOLEAN,
+    ms_hyper_v_srvs INT,
+    physical_srvs_in_hyper_v_cluster INT,
+    hyper_vvm_bu_individually INT,
+    clustered_oracle_srvs_selected BOOLEAN,
+    physical_srvs_in_oracle_env INT,
+    extensive_rman_scripting_selected BOOLEAN,
+    oracle_database_srvs_for_bu INT,
+    oracle_databases_for_bu_conf INT,
+    mysql_env_clustered_selected BOOLEAN,
+    physical_srvs_in_my_sql_cluster INT,
+    mysql_srvs INT,
+    lotus_notes_apps_clustered_selected BOOLEAN,
+    physical_lotus_notes_srvs INT,
+    ibm_lotus_domino_instances INT,
+    sap_env_clustered_selected BOOLEAN,
+    physical_srvs_in_the_sap_env INT,
+    sap_app_srvs INT
+);
+
+
+
+
+========= package =================
+com.emc.gs.tools.srf.model.dpad
+
+========= class ===================
+NetworkerDesign
+
+========= fields ==================
+boolean                            serverSelected
+boolean                            advancedBuTechSelected
+boolean                            storageNodesSelected
+boolean                            fsClientBuSelected
+boolean                            mediaDevicesSelected
+boolean                            appBuSelected
+NetworkerServer                    server
+NetworkerAdvancedBackupTechnology  advancedBuTech
+NetworkerStorageNodes              storageNodes
+NetworkerFileSystemClientBackups   fsClientBu
+NetworkerMediaDevices              mediaDevices
+NetworkerApplicationBackups        appBu
+
+----- com.emc.gs.tools.srf.model.dpad -----
+===== NetworkerDesign =====
+boolean                            |  serverSelected          |  srv_selected               |  BOOLEAN NOT NULL
+boolean                            |  advancedBuTechSelected  |  advanced_bu_tech_selected  |  BOOLEAN NOT NULL
+boolean                            |  storageNodesSelected    |  storage_nodes_selected     |  BOOLEAN NOT NULL
+boolean                            |  fsClientBuSelected      |  fs_client_bu_selected      |  BOOLEAN NOT NULL
+boolean                            |  mediaDevicesSelected    |  media_devices_selected     |  BOOLEAN NOT NULL
+boolean                            |  appBuSelected           |  app_bu_selected            |  BOOLEAN NOT NULL
+NetworkerServer                    |  server                  |  srv_id                     |  ManyToOne
+NetworkerAdvancedBackupTechnology  |  advancedBuTech          |  advanced_bu_tech_id        |  ManyToOne
+NetworkerStorageNodes              |  storageNodes            |  storage_nodes_id           |  ManyToOne
+NetworkerFileSystemClientBackups   |  fsClientBu              |  fs_client_bu_id            |  ManyToOne
+NetworkerMediaDevices              |  mediaDevices            |  media_devices_id           |  ManyToOne
+NetworkerApplicationBackups        |  appBu                   |  app_bu_id                  |  ManyToOne
+
+CREATE TABLE NetworkerDesign (
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    srv_selected BOOLEAN NOT NULL,
+    advanced_bu_tech_selected BOOLEAN NOT NULL,
+    storage_nodes_selected BOOLEAN NOT NULL,
+    fs_client_bu_selected BOOLEAN NOT NULL,
+    media_devices_selected BOOLEAN NOT NULL,
+    app_bu_selected BOOLEAN NOT NULL,
+    srv_id BIGINT,
+    advanced_bu_tech_id BIGINT,
+    storage_nodes_id BIGINT,
+    fs_client_bu_id BIGINT,
+    media_devices_id BIGINT,
+    app_bu_id BIGINT,
+    FOREIGN KEY (srv_id) REFERENCES NetworkerServer(id),
+    FOREIGN KEY (advanced_bu_tech_id) REFERENCES NetworkerAdvancedBackupTechnology(id),
+    FOREIGN KEY (storage_nodes_id) REFERENCES NetworkerStorageNodes(id),
+    FOREIGN KEY (fs_client_bu_id) REFERENCES NetworkerFileSystemClientBackups(id),
+    FOREIGN KEY (media_devices_id) REFERENCES NetworkerMediaDevices(id),
+    FOREIGN KEY (app_bu_id) REFERENCES NetworkerApplicationBackups(id)
+);
+
+
+
+
+========= package =================
+com.emc.gs.tools.srf.model.dpad
+
+========= class ===================
+NetworkerImpl
+
+========= fields ==================
+boolean                            serverSelected
+boolean                            advancedBuTechSelected
+boolean                            storageNodesSelected
+boolean                            fsClientBuSelected
+boolean                            mediaDevicesSelected
+boolean                            appBuSelected
+NetworkerServer                    server
+NetworkerAdvancedBackupTechnology  advancedBuTech
+NetworkerStorageNodes              storageNodes
+NetworkerFileSystemClientBackups   fsClientBu
+NetworkerMediaDevices              mediaDevices
+NetworkerApplicationBackups        appBu
+
+----- com.emc.gs.tools.srf.model.dpad -----
+===== NetworkerImpl =====
+boolean                            |  serverSelected          |  srv_selected               |  BOOLEAN NOT NULL
+boolean                            |  advancedBuTechSelected  |  advanced_bu_tech_selected  |  BOOLEAN NOT NULL
+boolean                            |  storageNodesSelected    |  storage_nodes_selected     |  BOOLEAN NOT NULL
+boolean                            |  fsClientBuSelected      |  fs_client_bu_selected      |  BOOLEAN NOT NULL
+boolean                            |  mediaDevicesSelected    |  media_devices_selected     |  BOOLEAN NOT NULL
+boolean                            |  appBuSelected           |  app_bu_selected            |  BOOLEAN NOT NULL
+NetworkerServer                    |  server                  |  srv_id                     |  ManyToOne
+NetworkerAdvancedBackupTechnology  |  advancedBuTech          |  advanced_bu_tech_id        |  ManyToOne
+NetworkerStorageNodes              |  storageNodes            |  storage_nodes_id           |  ManyToOne
+NetworkerFileSystemClientBackups   |  fsClientBu              |  fs_client_bu_id            |  ManyToOne
+NetworkerMediaDevices              |  mediaDevices            |  media_devices_id           |  ManyToOne
+NetworkerApplicationBackups        |  appBu                   |  app_bu_id                  |  ManyToOne
+
+CREATE TABLE NetworkerImpl (
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    srv_selected BOOLEAN NOT NULL,
+    advanced_bu_tech_selected BOOLEAN NOT NULL,
+    storage_nodes_selected BOOLEAN NOT NULL,
+    fs_client_bu_selected BOOLEAN NOT NULL,
+    media_devices_selected BOOLEAN NOT NULL,
+    app_bu_selected BOOLEAN NOT NULL,
+    srv_id BIGINT,
+    advanced_bu_tech_id BIGINT,
+    storage_nodes_id BIGINT,
+    fs_client_bu_id BIGINT,
+    media_devices_id BIGINT,
+    app_bu_id BIGINT,
+    FOREIGN KEY (srv_id) REFERENCES NetworkerServer(id),
+    FOREIGN KEY (advanced_bu_tech_id) REFERENCES NetworkerAdvancedBackupTechnology(id),
+    FOREIGN KEY (storage_nodes_id) REFERENCES NetworkerStorageNodes(id),
+    FOREIGN KEY (fs_client_bu_id) REFERENCES NetworkerFileSystemClientBackups(id),
+    FOREIGN KEY (media_devices_id) REFERENCES NetworkerMediaDevices(id),
+    FOREIGN KEY (app_bu_id) REFERENCES NetworkerApplicationBackups(id)
+);
+
+
+
+
+========= package =================
+com.emc.gs.tools.srf.model.dpad
+
+========= class ===================
+NetworkerUpgradeServer
+
+========= fields ==================
+Boolean  currentNetworker76Selected
+Boolean  currentNetworker80Selected
+Boolean  upgradeNetworker80Selected
+Boolean  upgradeNetworker81Selected
+Boolean  upgradedToNewHardwareSelected
+Integer  networkerSrvsToBeUpgraded
+
+----- com.emc.gs.tools.srf.model.dpad -----
+===== NetworkerUpgradeServer =====
+Boolean  |  currentNetworker76Selected     |  current_networker76_selected       |  BOOLEAN
+Boolean  |  currentNetworker80Selected     |  current_networker80_selected       |  BOOLEAN
+Boolean  |  upgradeNetworker80Selected     |  upgrade_networker80_selected       |  BOOLEAN
+Boolean  |  upgradeNetworker81Selected     |  upgrade_networker81_selected       |  BOOLEAN
+Boolean  |  upgradedToNewHardwareSelected  |  upgraded_to_new_hardware_selected  |  BOOLEAN
+Integer  |  networkerSrvsToBeUpgraded      |  networker_srvs_to_be_upgraded      |  INT
+
+CREATE TABLE NetworkerUpgradeServer (
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    current_networker76_selected BOOLEAN,
+    current_networker80_selected BOOLEAN,
+    upgrade_networker80_selected BOOLEAN,
+    upgrade_networker81_selected BOOLEAN,
+    upgraded_to_new_hardware_selected BOOLEAN,
+    networker_srvs_to_be_upgraded INT
+);
+
+
+
+
+========= package =================
+com.emc.gs.tools.srf.model.dpad
+
+========= class ===================
+NetworkerUpgrade
+
+========= fields ==================
+Boolean                 networkerSrvSelected
+Boolean                 networkerStorageNodesSelected
+Boolean                 networkerClientsSelected
+Boolean                 networkerMgmtConsoleSelected
+NetworkerUpgradeServer  server
+Integer                 networkerStorageNodes
+Integer                 networkerClients
+Integer                 networkerMgmtConsoles
+
+----- com.emc.gs.tools.srf.model.dpad -----
+===== NetworkerUpgrade =====
+Boolean                 |  networkerSrvSelected           |  networker_srv_selected            |  BOOLEAN
+Boolean                 |  networkerStorageNodesSelected  |  networker_storage_nodes_selected  |  BOOLEAN
+Boolean                 |  networkerClientsSelected       |  networker_clients_selected        |  BOOLEAN
+Boolean                 |  networkerMgmtConsoleSelected   |  networker_mgmt_console_selected   |  BOOLEAN
+NetworkerUpgradeServer  |  server                         |  srv_id                            |  ManyToOne
+Integer                 |  networkerStorageNodes          |  networker_storage_nodes           |  INT
+Integer                 |  networkerClients               |  networker_clients                 |  INT
+Integer                 |  networkerMgmtConsoles          |  networker_mgmt_consoles           |  INT
+
+CREATE TABLE NetworkerUpgrade (
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    networker_srv_selected BOOLEAN,
+    networker_storage_nodes_selected BOOLEAN,
+    networker_clients_selected BOOLEAN,
+    networker_mgmt_console_selected BOOLEAN,
+    srv_id BIGINT,
+    networker_storage_nodes INT,
+    networker_clients INT,
+    networker_mgmt_consoles INT,
+    FOREIGN KEY (srv_id) REFERENCES NetworkerUpgradeServer(id)
+);
+
+
+
+
+========= package =================
+com.emc.gs.tools.srf.model.dpad
+
+========= class ===================
+Networker
+
+========= fields ==================
+BigDecimal        hoursOfKnowledgeTransfer
+boolean           services
+boolean           impl
+boolean           upgradePlanning
+boolean           healthcheck
+boolean           upgrade
+boolean           activityTypeDesign
+boolean           activityTypeImpl
+NetworkerDesign   designService
+NetworkerImpl     implService
+NetworkerUpgrade  upgradeService
+
+----- com.emc.gs.tools.srf.model.dpad -----
+===== Networker =====
+BigDecimal        |  hoursOfKnowledgeTransfer  |  hours_of_knowledge_transfer  |  DECIMAL(20,2)
+boolean           |  services                  |  services                     |  BOOLEAN NOT NULL
+boolean           |  impl                      |  impl                         |  BOOLEAN NOT NULL
+boolean           |  upgradePlanning           |  upgrade_planning             |  BOOLEAN NOT NULL
+boolean           |  healthcheck               |  healthcheck                  |  BOOLEAN NOT NULL
+boolean           |  upgrade                   |  upgrade                      |  BOOLEAN NOT NULL
+boolean           |  activityTypeDesign        |  activity_type_design         |  BOOLEAN NOT NULL
+boolean           |  activityTypeImpl          |  activity_type_impl           |  BOOLEAN NOT NULL
+NetworkerDesign   |  designService             |  design_service_id            |  ManyToOne
+NetworkerImpl     |  implService               |  impl_service_id              |  ManyToOne
+NetworkerUpgrade  |  upgradeService            |  upgrade_service_id           |  ManyToOne
+
+CREATE TABLE Networker (
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    hours_of_knowledge_transfer DECIMAL(20,2),
+    services BOOLEAN NOT NULL,
+    impl BOOLEAN NOT NULL,
+    upgrade_planning BOOLEAN NOT NULL,
+    healthcheck BOOLEAN NOT NULL,
+    upgrade BOOLEAN NOT NULL,
+    activity_type_design BOOLEAN NOT NULL,
+    activity_type_impl BOOLEAN NOT NULL,
+    design_service_id BIGINT,
+    impl_service_id BIGINT,
+    upgrade_service_id BIGINT,
+    FOREIGN KEY (design_service_id) REFERENCES NetworkerDesign(id),
+    FOREIGN KEY (impl_service_id) REFERENCES NetworkerImpl(id),
+    FOREIGN KEY (upgrade_service_id) REFERENCES NetworkerUpgrade(id)
+);
+
+
+
+[Finished in 0.4s]

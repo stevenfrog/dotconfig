@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Edit Service Request - Service Activities Step</title>
+
+    <!-- External CSS -->
+    <!-- jQuery datepicker -->
+    <link rel="stylesheet" href="css/jquery-ui-1.10.2.custom.css"/>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--[if IE 7]>
+      <link rel="stylesheet" href="css/ie7.css"/>
+    <![endif]-->
+    <!-- External JS -->
+    <!-- jQuery library -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <!-- jQuery datepciker -->
+    <script src="js/jquery-ui-1.10.2.custom.js"></script>
+    <!-- jQuery draggable -->
+    <script src="js/jquery.ui.widget.js"></script>
+    <script src="js/jquery.ui.mouse.js"></script>
+    <script src="js/jquery.ui.draggable.js"></script>
+    <!-- jQuery cookie -->
+    <script src="js/jquery.cookie.js"></script>
+    <!-- jQuery jqtransform -->
+    <script src="js/jquery.jqtransform.js"></script>
+    <!-- Main JS -->
+    <script src="js/script.js"></script>
+    <script src="js/createservicerequest.js"></script>
+    <script type="text/javascript" src="http://127.0.0.1:35729/livereload.js"></script>
+
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <ul>
+          <li class="service-requests">
+            <a href="javascript:;" class="menu" id="m-service-requests">Service Requests</a>
+            <div class="flyout">
+              <div class="first">
+                <p><a href="ServiceRequests.html" id="m-manage-service-req">Manage service requests</a></p>
+              </div>
+              <div>
+                <p><a href="CreateServiceRequest.html" id="m-create-service-req">Create new service request</a></p>
+              </div>
+            </div> <!-- end of .flyout -->
+          </li>
+          <li class="customers">
+            <a href="javascript:;" class="menu" id="m-customers">Customers</a>
+            <div class="flyout">
+              <div class="first">
+                <p><a href="Customers.html" id="m-manage-customers">Manage customers</a></p>
+              </div>
+              <div>
+                <p><a href="AddCustomer.html" id="m-add-customer">Add new customer</a></p>
+              </div>
+            </div> <!-- end of .flyout -->
+          </li>
+          <li class="my-profile">
+            <a href="MyProfile.html" class="menu" id="m-my-profile">My Profile</a>
+          </li>
+        </ul>
+        <p class="right">
+          <a href="MyProfile.html" id="m-setting" class="settings"></a>
+<!--          <a href="javascript:;" id="m-export" class="export"></a> -->
+          <a href="Help.html" id="m-help" class="help"></a>
+        </p>
+      </div>  <!-- end of .container -->
+    </div> <!-- end of #header -->
+    <div id="content">
+      <div class="container">
+        <div class="tasks-panel" id="tasks-panel">
+          <div class="title">
+            <h3>Common OK, it's very good</h3>
+            <a href="javascript:;" class="mmlink" id="js-mmlink"></a>
+          </div>
+          <div class="actions">
+            <p>
+              <a class="create" href="CreateServiceRequest.html" id="js-task-create-service-request"><span>Create Service Request</span></a>
+            </p>
+            <p>
+              <a class="copy" href="EditServiceRequest.html" id="js-task-copy-service-request"><span>Copy Service Request</span></a>
+            </p>
+            <p>
+              <a class="edit" href="EditServiceRequest.html" id="js-task-edit-service-request"><span>Edit Service Request</span></a>
+            </p>
+            <p>
+              <a class="export" href="javascript:;" id="js-task-export-service-request"><span>Export to PDF</span></a>
+            </p>
+            <p>
+              <a class="print" href="javascript:;" id="js-task-print-service-request"><span>Print Service Request</span></a>
+            </p>
+          </div><!-- end of .actions -->
+          <div class="tips">
+            <h2>Did you know ?</h2>
+            <p>
+              You can open a project by clicking on its name in the table to the left.
+            </p>
+          </div><!-- end of .tips -->
+          <a class="eclink" href="javascript:;" id="js-eclink"></a><!-- end of .eclink -->
+        </div><!-- end of .tasks-panel -->
+        <div class="main-content">
+          <div class="breadcrumb">
+            <a href="ServiceRequests.html" id="bc-link">Manage Service Requests</a>
+            <span id="bc-span">Edit Service Request</span>
+          </div>
+          <h1>Edit Service Request</h1>
+          <div class="box new-service-request-box">
+            <div class="title-steps">
+              <a href="EditServiceRequest.html">1. Project Info</a>
+              <span></span>
+              <a href="EditServiceRequestStep2.html">2. Service Request Info</a>
+              <span class="right-on"></span>
+              <a href="javascript:;" class="on">3. Service / Activities</a>
+              <span class="left-on"></span>
+              <a href="EditServiceRequestStep4.html" class="last">4. Review</a>
+            </div>
+            <div class="content">
+              <div class="step-content-wrap">
+                <div class="sidebar">
+                  <h5>SERVICE SCOPE</h5>
+                  <div class="sidebar-list">
+                    <ul>
+                      <li><a href="EditServiceRequestStep3.html">Infrastructure</a></li>
+                      <li><a href="EditServiceRequestStep3Unified.html">Unified</a></li>
+                      <li><a href="EditServiceRequestStep3Mainframe.html">Mainframe</a></li>
+                      <li><a href="EditServiceRequestStep3BC.html">BC</a></li>
+                      <li class="on"><a href="javascript:;">DPAD</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="step-content activities-step dpad-step edit-page">
+                  <div class="content-inner">
+                    <div class="general-info-sec">
+                      <h5>GENERAL INFORMATION</h5>
+                      <p>
+                        <label><span class="tip"></span># of sites involved?</label>
+                        <span class="sep">:</span>
+
+                        <span class="select-input-box">
+                          <span class="ground-box">
+                            <select id="sel_value">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>More Than 4</option>
+                            </select>
+                          </span>
+                          <input type="text" class="text integerOnly" value=""/>
+                        </span>
+                      </p>
+                      <p>
+                        <label for="input-hoursKnowledge">
+                          <span class="tip"></span>
+                          # of Hours of Knowledge Transfer
+                        </label>
+                        <span class="sep">:</span>
+                        <input type="text" id="input-hoursKnowledge" class="text disabled-text" readonly value="0.00"/>
+                      </p>
+                      <p>
+                        <label for="textarea-general-comments"><span class="tip"></span>General Comments</label>
+                        <span class="sep">:</span>
+                        <textarea name="textarea-general-comments" id="textarea-general-comments"></textarea>
+                      </p>
+                    </div><!-- end of .general-info-sec -->
+                    <h5>SERVICES TO BE SCOPED IN THIS BOE</h5>
+                    <div class="check-set js-transform-set">
+                      <div>
+                        <input type="checkbox" id="chk-Avamar" name="chk-Avamar" checked="checked"/>
+                        <label class="chk-lbl">Avamar</label>
+                        <input type="checkbox" id="chk-DataDomain" name="chk-DataDomain" checked="checked"/>
+                        <label class="chk-lbl">Data Domain</label>
+                        <input type="checkbox" id="chk-DataProtectionAdvisor" name="chk-DataProtectionAdvisor" checked="checked"/>
+                        <label class="chk-lbl">Data Protection Advisor</label>
+                        <input type="checkbox" id="chk-EMCDiskLibrary" name="chk-EMCDiskLibrary" checked="checked"/>
+                        <label class="chk-lbl chk-lbl-last">EMC Disk Library</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="chk-Networker" name="chk-Networker" checked="checked"/>
+                        <label class="chk-lbl">Networker</label>
+                        <input type="checkbox" id="chk-DLM" name="chk-DLM"/>
+                        <label class="chk-lbl">DLM</label>
+                        <input type="checkbox" id="chk-RecoverPoint" name="chk-RecoverPoint"/>
+                        <label class="chk-lbl">RecoverPoint</label>
+                        <input type="checkbox" id="chk-VPLEX" name="chk-VPLEX"/>
+                        <label class="chk-lbl chk-lbl-last">VPLEX</label>
+                      </div>
+                    </div>
+                    <!-- end of .check-set -->
+
+
+
+
+
+                    <div class="general-info-sec hideNetworker">
+                      <h5>NETWORKER</h5>
+                      <p>
+                        <label for="input-Networker-hoursKnowledge">
+                          <span class="tip"></span>
+                          # of Hours of Knowledge Transfer
+                        </label>
+                        <span class="sep">:</span>
+                        <input type="text" id="input-Networker-hoursKnowledge" class="text floatOnly" value=""/>
+                      </p>
+                      <div class="check-set check-set-inline no-padding js-transform-set">
+                        <p>
+                          <label>
+                            <span class="tip"></span>
+                            Networker Services
+                          </label>
+                          <span class="sep">:</span>
+                        </p>
+                        <div>
+                          <input type="checkbox" id="chk-NetworkerImplementation" name="chk-NetworkerServices" checked="checked"/>
+                          <label class="chk-lbl">Networker Implementation</label>
+                          <input type="checkbox" id="chk-NetworkerUpgradePlanning" name="chk-NetworkerServices" checked="checked"/>
+                          <label class="chk-lbl chk-lbl-width">Networker Upgrade Planning</label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="chk-NetworkerHealthcheck" name="chk-NetworkerServices" checked="checked"/>
+                          <label class="chk-lbl">Networker Healthcheck</label>
+                          <input type="checkbox" id="chk-NetworkerUpgrade" name="chk-NetworkerServices" checked="checked"/>
+                          <label class="chk-lbl chk-lbl-width">Networker Upgrade</label>
+                        </div>
+                      </div>
+                      <div class="hide3ImplementationRelatedServices">
+                        <p>
+                          <label>
+                            <span class="tip"></span>
+                            Networker Activity Type
+                          </label>
+                          <span class="sep">:</span>
+                          <input type="checkbox" id="chk-NetworkerActivityTypeDesign" checked="checked"/>
+                          <label class="chk-lbl">Design</label>
+                          <input type="checkbox" id="chk-NetworkerActivityTypeImplementation" checked="checked"/>
+                          <label class="chk-lbl">Implementation</label>
+                        </p>
+                      </div>
+                      <div class="hideNetworkerDesign">
+                        <div class="sub-title">
+                          <h5>NETWORKER DESIGN</h5>
+                        </div>
+                        <div class="check-set check-set-inline no-padding js-transform-set">
+                          <p>
+                            <label>
+                              <span class="tip"></span>
+                              Select Networker Components to be Implemented
+                            </label>
+                            <span class="sep">:</span>
+                          </p>
+                          <div>
+                            <input type="checkbox" id="chk-NetworkerServer" name="chk-NetworkerComponents" checked="checked"/>
+                            <label class="chk-lbl">Networker Server</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-NetworkerAdvancedBackupTechnology" name="chk-NetworkerComponents" checked="checked"/>
+                            <label class="chk-lbl long-check-box">Networker Advanced Backup Technology</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-NetworkerStorageNodes" name="chk-NetworkerComponents" checked="checked"/>
+                            <label class="chk-lbl">Networker Storage Nodes</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-NetworkerFileSystemClientBackups" name="chk-NetworkerComponents" checked="checked"/>
+                            <label class="chk-lbl long-check-box">Networker File System Client Backups</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-MediaDevices" name="chk-NetworkerComponents" checked="checked"/>
+                            <label class="chk-lbl">Media Devices</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-NetworkerApplicationBackups" name="chk-NetworkerComponents" checked="checked"/>
+                            <label class="chk-lbl long-check-box">Networker Application Backups</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-EMCBackupAndRecoveryManager" name="chk-NetworkerComponents" checked="checked"/>
+                            <label class="chk-lbl long-check-box">EMC Backup and Recovery Manager</label>
+                          </div>
+                        </div>
+                        <div class="hideNetworkerServerAndStorageNodes">
+                          <p>
+                            <label><span class="tip"></span>Select the Networker Implementation Environment</label>
+                            <span class="sep">:</span>
+                            <input type="radio" name="radio-NetworkerImplementationEnvironment" id="radio-NetworkerImplementationEnvironment-new"/>
+                            <label class="rad-lbl rad-lbl-first" for="radio-NetworkerImplementationEnvironment-new">New</label>
+                            <input type="radio" name="radio-NetworkerImplementationEnvironment" id="radio-NetworkerImplementationEnvironment-existing"/>
+                            <label class="rad-lbl" for="radio-NetworkerImplementationEnvironment-existing">Existing</label>
+                          </p>
+                          <p>
+                            <label for="input-NetworkerServers">
+                              <span class="tip"></span>
+                              # of Networker Servers
+                            </label>
+                            <span class="sep">:</span>
+                            <input type="text" id="input-NetworkerServers" class="text integerOnly"/>
+                          </p>
+                        </div>
+                        <div class="hideNetworkerStorageNodes">
+                          <div class="check-set check-set-inline no-padding js-transform-set">
+                            <p>
+                              <label>
+                                <span class="tip"></span>
+                                Select Networker Storage Node Types to Be Implemented
+                              </label>
+                              <span class="sep">:</span>
+                            </p>
+                            <div>
+                              <input type="checkbox" id="chk-StorageNode" name="chk-NetworkerStorageNodeTypes" checked="checked"/>
+                              <label class="chk-lbl">Storage Node</label>
+                              <input type="checkbox" id="chk-DedicatedStorageNode" name="chk-NetworkerStorageNodeTypes" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">Dedicated Storage Node</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-AvamarDeDuplicationNode" name="chk-NetworkerStorageNodeTypes" checked="checked"/>
+                              <label class="chk-lbl">Avamar De-Duplication Node</label>
+                            </div>
+                          </div>
+                          <div class="hideStorageNode">
+                            <p>
+                              <label for="input-NetworkerStorageNodes">
+                                <span class="tip"></span>
+                                # of Networker Storage Nodes
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerStorageNodes" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideDedicatedStorageNode">
+                            <p>
+                              <label for="input-NetworkerDedicatedStorageNodes">
+                                <span class="tip"></span>
+                                # of Networker Dedicated Storage Nodes
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerDedicatedStorageNodes" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideAvamarDeDuplicationNode">
+                            <p>
+                              <label for="input-NetworkerDeDuplicationNodes">
+                                <span class="tip"></span>
+                                # of Networker De-Duplication Nodes
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerDeDuplicationNodes" class="text integerOnly"/>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="hideMediaDevices">
+                          <div class="check-set check-set-inline no-padding js-transform-set">
+                            <p>
+                              <label>
+                                <span class="tip"></span>
+                                Select Networker Media Devices to be configured
+                              </label>
+                              <span class="sep">:</span>
+                            </p>
+                            <div>
+                              <input type="checkbox" id="chk-AutoChanger" name="chk-NetworkerMediaDevices" checked="checked"/>
+                              <label class="chk-lbl">Auto Changer</label>
+                              <input type="checkbox" id="chk-DDBoost" name="chk-NetworkerMediaDevices" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">DD Boost</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-TapeDevice" name="chk-NetworkerMediaDevices" checked="checked"/>
+                              <label class="chk-lbl">Tape Device</label>
+                              <input type="checkbox" id="chk-ATMOS" name="chk-NetworkerMediaDevices" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">ATMOS</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-AdvancedFileTypeDevice" name="chk-NetworkerMediaDevices" checked="checked"/>
+                              <label class="chk-lbl">Advanced File Type Device</label>
+                            </div>
+                          </div>
+                          <div class="hideAutoChanger">
+                            <p>
+                              <label for="input-NetworkerAutoChangers">
+                                <span class="tip"></span>
+                                # of Networker Auto Changers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerAutoChangers" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideTapeDevice">
+                            <p>
+                              <label for="input-NetworkerTapeDevices">
+                                <span class="tip"></span>
+                                # of Networker Tape Devices
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerTapeDevices" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideAdvancedFileTypeDevice">
+                            <p>
+                              <label for="input-NetworkerAdvancedFileTypeDevices">
+                                <span class="tip"></span>
+                                # of Networker Advanced File Type Devices
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerAdvancedFileTypeDevices" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideDDBoost">
+                            <p>
+                              <label for="input-NetworkerDDBoostDevices">
+                                <span class="tip"></span>
+                                # of Networker DD Boost Devices
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerDDBoostDevices" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideATMOS">
+                            <p>
+                              <label for="input-NetworkerATMOSDevices">
+                                <span class="tip"></span>
+                                # of Networker ATMOS Devices
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerATMOSDevices" class="text integerOnly"/>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="hideAdvancedBackupTechnology">
+                          <div class="check-set check-set-inline no-padding js-transform-set">
+                            <p>
+                              <label>
+                                <span class="tip"></span>
+                                Select Networker Advanced Applications to be Backed Up
+                              </label>
+                              <span class="sep">:</span>
+                            </p>
+                            <div>
+                              <input type="checkbox" id="chk-SNMP" name="chk-NetworkerAdvancedApplications" checked="checked"/>
+                              <label class="chk-lbl">SNMP</label>
+                              <input type="checkbox" id="chk-VMWARE" name="chk-NetworkerAdvancedApplications" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">VMWARE</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-SnapshotManagement" name="chk-NetworkerAdvancedApplications" checked="checked"/>
+                              <label class="chk-lbl">Snapshot Management</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-NAS" name="chk-NetworkerAdvancedApplications" checked="checked"/>
+                              <label class="chk-lbl long-check-box">NAS (Includes NDMP and Snapshot Management for NAS)</label>
+                            </div>
+                          </div>
+                          <div class="hideVMWAREDesign">
+                            <p>
+                              <label><span class="tip"></span>Include Networker VMWare Protection Backups?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeNetworkerVMWareProtectionBackups" id="radio-IncludeNetworkerVMWareProtectionBackups-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeNetworkerVMWareProtectionBackups-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeNetworkerVMWareProtectionBackups" id="radio-IncludeNetworkerVMWareProtectionBackups-no"/>
+                              <label class="rad-lbl" for="radio-IncludeNetworkerVMWareProtectionBackups-no">No</label>
+                            </p>
+                            <div class="hideNoNetworkerVMWareProtectionBackups">
+                              <p>
+                                <label for="input-VMWarevSphereHosts">
+                                  <span class="tip"></span>
+                                  # of VMWare vSphere Hosts
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-VMWarevSphereHosts" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <div class="hideYesNetworkerVMWareProtectionBackups">
+                              <p>
+                                <label for="input-VMWareBackupAppliances">
+                                  <span class="tip"></span>
+                                  # of VMWare Backup Appliances
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-VMWareBackupAppliances" class="text integerOnly"/>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="hideSnapshotManagement">
+                            <p>
+                              <label for="input-NetworkerSnapshotManagementApplicationHosts">
+                                <span class="tip"></span>
+                                # of Networker Snapshot Management Application Hosts
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerSnapshotManagementApplicationHosts" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-NetworkerSnapshotManagementMountHosts">
+                                <span class="tip"></span>
+                                # of Networker Snapshot Management Mount Hosts
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerSnapshotManagementMountHosts" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideNAS">
+                            <p>
+                              <label for="input-NASDataMoversToBeBackedUpViaNDMP">
+                                <span class="tip"></span>
+                                # of NAS DataMovers to be Backed Up via NDMP
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NASDataMoversToBeBackedUpViaNDMP" class="text integerOnly"/>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="hideNetworkerFileSystemClientBackups">
+                          <p>
+                            <label for="input-NetworkerClients">
+                              <span class="tip"></span>
+                              # of Networker Clients (Windows / Unix / Linux)
+                            </label>
+                            <span class="sep">:</span>
+                            <input type="text" id="input-NetworkerClients" class="text integerOnly"/>
+                          </p>
+                          <p>
+                            <label for="input-NetworkerClusterClientConnections">
+                              <span class="tip"></span>
+                              # of Networker Cluster Client Connections
+                            </label>
+                            <span class="sep">:</span>
+                            <input type="text" id="input-NetworkerClusterClientConnections" class="text integerOnly"/>
+                          </p>
+                        </div>
+                        <div class="hideNetworkerApplicationBackups">
+                          <div class="check-set check-set-inline no-padding js-transform-set">
+                            <p>
+                              <label>
+                                <span class="tip"></span>
+                                Select Applications to be Backed Up
+                              </label>
+                              <span class="sep">:</span>
+                            </p>
+                            <div>
+                              <input type="checkbox" id="chk-MicrosoftSQLNetworker" name="chk-ApplicationsToBeBackedUp" checked="checked"/>
+                              <label class="chk-lbl">Microsoft SQL</label>
+                              <input type="checkbox" id="chk-MicrosoftExchangeNetworker" name="chk-ApplicationsToBeBackedUp" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">Microsoft Exchange</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-MicrosoftSharepointNetworker" name="chk-ApplicationsToBeBackedUp" checked="checked"/>
+                              <label class="chk-lbl">Microsoft Sharepoint</label>
+                              <input type="checkbox" id="chk-MicrosoftHyperVNetworker" name="chk-ApplicationsToBeBackedUp" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">Microsoft Hyper-V</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-OracleNetworker" name="chk-ApplicationsToBeBackedUp" checked="checked"/>
+                              <label class="chk-lbl">Oracle</label>
+                              <input type="checkbox" id="chk-MySQLNetworker" name="chk-ApplicationsToBeBackedUp" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">MySQL</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-LotusNotesNetworker" name="chk-ApplicationsToBeBackedUp" checked="checked"/>
+                              <label class="chk-lbl">Lotus Notes</label>
+                              <input type="checkbox" id="chk-SAPNetworker" name="chk-ApplicationsToBeBackedUp" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">SAP</label>
+                            </div>
+                          </div>
+                          <div class="hideMicrosoftSQLNetworker">
+                            <p>
+                              <label><span class="tip"></span>Include Microsoft SQL Server Cluster?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeMicrosoftSQLServerCluster" id="radio-IncludeMicrosoftSQLServerCluster-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeMicrosoftSQLServerCluster-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeMicrosoftSQLServerCluster" id="radio-IncludeMicrosoftSQLServerCluster-no"/>
+                              <label class="rad-lbl" for="radio-IncludeMicrosoftSQLServerCluster-no">No</label>
+                            </p>
+                            <p>
+                              <label for="input-MicrosoftSQLServers">
+                                <span class="tip"></span>
+                                # of Microsoft SQL Servers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-MicrosoftSQLServers" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-SQLDatabases">
+                                <span class="tip"></span>
+                                # of SQL Databases
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-SQLDatabases" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideMicrosoftExchangeNetworker">
+                            <p>
+                              <label><span class="tip"></span>Do you want Exchange Granular Backups to Be Implemented?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-DoYouWantExchangeGranularBackups" id="radio-DoYouWantExchangeGranularBackups-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-DoYouWantExchangeGranularBackups-yes">Yes</label>
+                              <input type="radio" name="radio-DoYouWantExchangeGranularBackups" id="radio-DoYouWantExchangeGranularBackups-no"/>
+                              <label class="rad-lbl" for="radio-DoYouWantExchangeGranularBackups-no">No</label>
+                            </p>
+                            <p>
+                              <label><span class="tip"></span>Include Clustered Exchange Servers?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeClusteredExchangeServers" id="radio-IncludeClusteredExchangeServers-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeClusteredExchangeServers-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeClusteredExchangeServers" id="radio-IncludeClusteredExchangeServers-no"/>
+                              <label class="rad-lbl" for="radio-IncludeClusteredExchangeServers-no">No</label>
+                            </p>
+                            <p>
+                              <label for="input-MicrosoftExchangeMailboxServers">
+                                <span class="tip"></span>
+                                # of Microsoft Exchange Mailbox Servers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-MicrosoftExchangeMailboxServers" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-MicrosoftExchangeDatabaseStores">
+                                <span class="tip"></span>
+                                # of Microsoft Exchange Database Stores
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-MicrosoftExchangeDatabaseStores" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label><span class="tip"></span>Data Domain Boost?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-DataDomainBoost" id="radio-DataDomainBoost-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-DataDomainBoost-yes">Yes</label>
+                              <input type="radio" name="radio-DataDomainBoost" id="radio-DataDomainBoost-no"/>
+                              <label class="rad-lbl" for="radio-DataDomainBoost-no">No</label>
+                            </p>
+                          </div>
+                          <div class="hideMicrosoftSharepointNetworker">
+                            <p>
+                              <label><span class="tip"></span>Include Microsoft SQL Server Cluster?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeMicrosoftSQLServerClusterMicrosoftSharepoint" id="radio-IncludeMicrosoftSQLServerClusterMicrosoftSharepoint-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeMicrosoftSQLServerClusterMicrosoftSharepoint-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeMicrosoftSQLServerClusterMicrosoftSharepoint" id="radio-IncludeMicrosoftSQLServerClusterMicrosoftSharepoint-no"/>
+                              <label class="rad-lbl" for="radio-IncludeMicrosoftSQLServerClusterMicrosoftSharepoint-no">No</label>
+                            </p>
+                            <p>
+                              <label><span class="tip"></span>Include Granular SharePoint Backups?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeGranularSharePointBackups" id="radio-IncludeGranularSharePointBackups-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeGranularSharePointBackups-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeGranularSharePointBackups" id="radio-IncludeGranularSharePointBackups-no"/>
+                              <label class="rad-lbl" for="radio-IncludeGranularSharePointBackups-no">No</label>
+                            </p>
+                            <p>
+                              <label><span class="tip"></span>Include SharePoint Distrbuted Environment?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeSharePointDistrbutedEnvironment" id="radio-IncludeSharePointDistrbutedEnvironment-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeSharePointDistrbutedEnvironment-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeSharePointDistrbutedEnvironment" id="radio-IncludeSharePointDistrbutedEnvironment-no"/>
+                              <label class="rad-lbl" for="radio-IncludeSharePointDistrbutedEnvironment-no">No</label>
+                            </p>
+                            <p>
+                              <label for="input-MicrosoftSQLServersMicrosoftSharepoint">
+                                <span class="tip"></span>
+                                # of Microsoft SQL Servers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-MicrosoftSQLServersMicrosoftSharepoint" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-SQLDatabasesMicrosoftSharepoint">
+                                <span class="tip"></span>
+                                # of SQL Databases
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-SQLDatabasesMicrosoftSharepoint" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-SharePointFarms">
+                                <span class="tip"></span>
+                                # of SharePoint Farms
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-SharePointFarms" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-SharePointWebApplications">
+                                <span class="tip"></span>
+                                # of SharePoint Web Applications
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-SharePointWebApplications" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-SharePointSites">
+                                <span class="tip"></span>
+                                # of SharePoint Sites
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-SharePointSites" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-SharePointSubSites">
+                                <span class="tip"></span>
+                                # of SharePoint Sub-Sites
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-SharePointSubSites" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label><span class="tip"></span>Data Domain Boost?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-DataDomainBoostMicrosoftSharepoint" id="radio-DataDomainBoostMicrosoftSharepoint-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-DataDomainBoostMicrosoftSharepoint-yes">Yes</label>
+                              <input type="radio" name="radio-DataDomainBoostMicrosoftSharepoint" id="radio-DataDomainBoostMicrosoftSharepoint-no"/>
+                              <label class="rad-lbl" for="radio-DataDomainBoostMicrosoftSharepoint-no">No</label>
+                            </p>
+                          </div>
+                          <div class="hideMicrosoftHyperVNetworker">
+                            <p>
+                              <label><span class="tip"></span>Are any of the Hyper-V Environments Clustered?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-HyperVEnvironmentsClustered" id="radio-HyperVEnvironmentsClustered-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-HyperVEnvironmentsClustered-yes">Yes</label>
+                              <input type="radio" name="radio-HyperVEnvironmentsClustered" id="radio-HyperVEnvironmentsClustered-no"/>
+                              <label class="rad-lbl" for="radio-HyperVEnvironmentsClustered-no">No</label>
+                            </p>
+                            <p>
+                              <label for="input-MicrosoftHyperVServersToBeBackedUp">
+                                <span class="tip"></span>
+                                # of Microsoft Hyper-V Servers to be Backed Up with NMM
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-MicrosoftHyperVServersToBeBackedUp" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideOracleNetworker">
+                            <p>
+                              <label><span class="tip"></span>Are there any clustered Oracle Servers to be backed up</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-OracleServersToBeBackedUp" id="radio-OracleServersToBeBackedUp-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-OracleServersToBeBackedUp-yes">Yes</label>
+                              <input type="radio" name="radio-OracleServersToBeBackedUp" id="radio-OracleServersToBeBackedUp-no"/>
+                              <label class="rad-lbl" for="radio-OracleServersToBeBackedUp-no">No</label>
+                            </p>
+                            <p>
+                              <label><span class="tip"></span>Include Extensive RMAN Scripting</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeExtensiveRMANScripting" id="radio-IncludeExtensiveRMANScripting-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeExtensiveRMANScripting-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeExtensiveRMANScripting" id="radio-IncludeExtensiveRMANScripting-no"/>
+                              <label class="rad-lbl" for="radio-IncludeExtensiveRMANScripting-no">No</label>
+                            </p>
+                            <p>
+                              <label for="input-OracleDatabaseServersForRMANBackupOracle">
+                                <span class="tip"></span>
+                                # of Oracle Database Servers for RMAN Backup
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-OracleDatabaseServersForRMANBackupOracle" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-OracleDatabasesForBackupConfiguration">
+                                <span class="tip"></span>
+                                # of Oracle Databases for Backup Configuration
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-OracleDatabasesForBackupConfiguration" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideMySQLNetworker">
+                            <p>
+                              <label><span class="tip"></span>MySql Environment Clustered?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-MySqlEnvironmentClustered" id="radio-MySqlEnvironmentClustered-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-MySqlEnvironmentClustered-yes">Yes</label>
+                              <input type="radio" name="radio-MySqlEnvironmentClustered" id="radio-MySqlEnvironmentClustered-no"/>
+                              <label class="rad-lbl" for="radio-MySqlEnvironmentClustered-no">No</label>
+                            </p>
+                            <p>
+                              <label for="input-MySQLServers">
+                                <span class="tip"></span>
+                                # of MySQL Servers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-MySQLServers" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideLotusNotesNetworker">
+                            <p>
+                              <label><span class="tip"></span>Are any of the Lotus Notes Applications Clustered</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-LotusNotesApplicationsClustered" id="radio-LotusNotesApplicationsClustered-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-LotusNotesApplicationsClustered-yes">Yes</label>
+                              <input type="radio" name="radio-LotusNotesApplicationsClustered" id="radio-LotusNotesApplicationsClustered-no"/>
+                              <label class="rad-lbl" for="radio-LotusNotesApplicationsClustered-no">No</label>
+                            </p>
+                            <p>
+                              <label for="input-IBMLotusDominoInstances">
+                                <span class="tip"></span>
+                                # of IBM Lotus Domino Instances
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-IBMLotusDominoInstances" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideSAPNetworker">
+                            <p>
+                              <label><span class="tip"></span>Is SAP Environment Clustered?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IsSAPEnvironmentClustered" id="radio-IsSAPEnvironmentClustered-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IsSAPEnvironmentClustered-yes">Yes</label>
+                              <input type="radio" name="radio-IsSAPEnvironmentClustered" id="radio-IsSAPEnvironmentClustered-no"/>
+                              <label class="rad-lbl" for="radio-IsSAPEnvironmentClustered-no">No</label>
+                            </p>
+                            <p>
+                              <label for="input-SAPApplicaitonServers">
+                                <span class="tip"></span>
+                                # of SAP Applicaiton Servers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-SAPApplicaitonServers" class="text integerOnly"/>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="hideEMCBackupAndRecoveryManager">
+
+                        </div>
+                      </div><!-- end of Networker Design -->
+                      <div class="hideNetworkerImplementation">
+                        <div class="sub-title">
+                          <h5>NETWORKER IMPLEMENTATION</h5>
+                        </div>
+                        <div class="check-set check-set-inline no-padding js-transform-set">
+                          <p>
+                            <label>
+                              <span class="tip"></span>
+                              Select Networker Components to be Implemented
+                            </label>
+                            <span class="sep">:</span>
+                          </p>
+                          <div>
+                            <input type="checkbox" id="chk-NetworkerServerImplementation" name="chk-NetworkerComponentsImplementation" checked="checked"/>
+                            <label class="chk-lbl">Networker Server</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-NetworkerAdvancedBackupTechnologyImplementation" name="chk-NetworkerComponentsImplementation" checked="checked"/>
+                            <label class="chk-lbl long-check-box">Networker Advanced Backup Technology</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-NetworkerStorageNodesImplementation" name="chk-NetworkerComponentsImplementation" checked="checked"/>
+                            <label class="chk-lbl">Networker Storage Nodes</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-NetworkerFileSystemClientBackupsImplementation" name="chk-NetworkerComponentsImplementation" checked="checked"/>
+                            <label class="chk-lbl long-check-box">Networker File System Client Backups</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-MediaDevicesImplementation" name="chk-NetworkerComponentsImplementation" checked="checked"/>
+                            <label class="chk-lbl">Media Devices</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-NetworkerApplicationBackupsImplementation" name="chk-NetworkerComponentsImplementation" checked="checked"/>
+                            <label class="chk-lbl">Networker Application Backups</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-EMCBackupAndRecoveryManagerImplementation" name="chk-NetworkerComponentsImplementation" checked="checked"/>
+                            <label class="chk-lbl">EMC Backup and Recovery Manager</label>
+                          </div>
+                        </div>
+                        <div class="hideNetworkerServerImplementation">
+                          <p>
+                            <label><span class="tip"></span>Select the Networker Implementation Environment</label>
+                            <span class="sep">:</span>
+                            <input type="radio" name="radio-NetworkerImplementationEnvironmentImplementation" id="radio-NetworkerImplementationEnvironmentImplementation-new"/>
+                            <label class="rad-lbl rad-lbl-first" for="radio-NetworkerImplementationEnvironmentImplementation-new">New</label>
+                            <input type="radio" name="radio-NetworkerImplementationEnvironmentImplementation" id="radio-NetworkerImplementationEnvironmentImplementation-existing"/>
+                            <label class="rad-lbl" for="radio-NetworkerImplementationEnvironmentImplementation-existing">Existing</label>
+                          </p>
+                          <p>
+                            <label for="input-NetworkerServersImplementation">
+                              <span class="tip"></span>
+                              # of Networker Servers
+                            </label>
+                            <span class="sep">:</span>
+                            <input type="text" id="input-NetworkerServersImplementation" class="text integerOnly"/>
+                          </p>
+                          <p>
+                            <label for="input-NetworkerManagementConsolesImplementation">
+                              <span class="tip"></span>
+                              # of Networker Management Consoles
+                            </label>
+                            <span class="sep">:</span>
+                            <input type="text" id="input-NetworkerManagementConsolesImplementation" class="text integerOnly"/>
+                          </p>
+                        </div>
+                        <div class="hideNetworkerStorageNodesImplementation">
+                          <div class="check-set check-set-inline no-padding js-transform-set">
+                            <p>
+                              <label>
+                                <span class="tip"></span>
+                                Select Networker Storage Node Types to Be Implemented
+                              </label>
+                              <span class="sep">:</span>
+                            </p>
+                            <div>
+                              <input type="checkbox" id="chk-StorageNodeImplementation" name="chk-NetworkerStorageNodeTypesImplementation" checked="checked"/>
+                              <label class="chk-lbl">Storage Node</label>
+                              <input type="checkbox" id="chk-DedicatedStorageNodeImplementation" name="chk-NetworkerStorageNodeTypesImplementation" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">Dedicated Storage Node</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-AvamarDeDuplicationNodeImplementation" name="chk-NetworkerStorageNodeTypesImplementation" checked="checked"/>
+                              <label class="chk-lbl">Avamar De-Duplication Node</label>
+                            </div>
+                          </div>
+                          <div class="hideStorageNodeImplementation">
+                            <p>
+                              <label for="input-NetworkerStorageNodesImplementation">
+                                <span class="tip"></span>
+                                # of Networker Storage Nodes
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerStorageNodesImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideDedicatedStorageNodeImplementation">
+                            <p>
+                              <label for="input-NetworkerDedicatedStorageNodesImplementation">
+                                <span class="tip"></span>
+                                # of Networker Dedicated Storage Nodes
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerDedicatedStorageNodesImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideAvamarDeDuplicationNodeImplementation">
+                            <p>
+                              <label for="input-NetworkerDeDuplicationNodeImplementation">
+                                <span class="tip"></span>
+                                # of Networker De-Duplication Nodes
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerDeDuplicationNodeImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="hideMediaDevicesImplementation">
+                          <div class="check-set check-set-inline no-padding js-transform-set">
+                            <p>
+                              <label>
+                                <span class="tip"></span>
+                                Select Networker Media Devices to be configured
+                              </label>
+                              <span class="sep">:</span>
+                            </p>
+                            <div>
+                              <input type="checkbox" id="chk-AutoChangerImplementation" name="chk-NetworkerMediaDevicesImplementation" checked="checked"/>
+                              <label class="chk-lbl">Auto Changer</label>
+                              <input type="checkbox" id="chk-DDBoostImplementation" name="chk-NetworkerMediaDevicesImplementation" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">DD Boost</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-TapeDeviceImplementation" name="chk-NetworkerMediaDevicesImplementation" checked="checked"/>
+                              <label class="chk-lbl">Tape Device</label>
+                              <input type="checkbox" id="chk-ATMOSImplementation" name="chk-NetworkerMediaDevicesImplementation" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">ATMOS</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-AdvancedFileTypeDeviceImplementation" name="chk-NetworkerMediaDevicesImplementation" checked="checked"/>
+                              <label class="chk-lbl">Advanced File Type Device</label>
+                            </div>
+                          </div>
+                          <div class="hideAutoChangerImplementation">
+                            <p>
+                              <label for="input-NetworkerAutoChangersImplementation">
+                                <span class="tip"></span>
+                                # of Networker Auto Changers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerAutoChangersImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideTapeDeviceImplementation">
+                            <p>
+                              <label for="input-NetworkerTapeDevicesImplementation">
+                                <span class="tip"></span>
+                                # of Networker Tape Devices
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerTapeDevicesImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideAdvancedFileTypeDeviceImplementation">
+                            <p>
+                              <label for="input-NetworkerAdvancedFileTypeDevicesImplementation">
+                                <span class="tip"></span>
+                                # of Networker Advanced File Type Devices
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerAdvancedFileTypeDevicesImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideDDBoostImplementation">
+                            <p>
+                              <label for="input-NetworkerDDBoostDevicesImplementation">
+                                <span class="tip"></span>
+                                # of Networker DD Boost Devices
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerDDBoostDevicesImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideATMOSImplementation">
+                            <p>
+                              <label for="input-NetworkerATMOSDevicesImplementation">
+                                <span class="tip"></span>
+                                # of Networker ATMOS Devices
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerATMOSDevicesImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="hideNetworkerAdvancedBackupTechnologyImplementation">
+                          <div class="check-set check-set-inline no-padding js-transform-set">
+                            <p>
+                              <label>
+                                <span class="tip"></span>
+                                Select Networker Advanced Applications to be Backed Up
+                              </label>
+                              <span class="sep">:</span>
+                            </p>
+                            <div>
+                              <input type="checkbox" id="chk-SNMPImplementation" name="chk-NetworkerAdvancedApplicationsImplementation" checked="checked"/>
+                              <label class="chk-lbl">SNMP</label>
+                              <input type="checkbox" id="chk-VMWAREImplementation" name="chk-NetworkerAdvancedApplicationsImplementation" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">VMWARE</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-SnapshotManagementImplementation" name="chk-NetworkerAdvancedApplicationsImplementation" checked="checked"/>
+                              <label class="chk-lbl">Snapshot Management</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-NASImplementation" name="chk-NetworkerAdvancedApplicationsImplementation" checked="checked"/>
+                              <label class="chk-lbl long-check-box">NAS (Includes NDMP and Snapshot Management for NAS)</label>
+                            </div>
+                          </div>
+                          <div class="hideSNMPImplementation">
+                            <p>
+                              <label for="input-NetworkerSNMPModuleslementation">
+                                <span class="tip"></span>
+                                # of Networker SNMP Modules
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerSNMPModuleslementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideVMWAREImplementation">
+                            <p>
+                              <label><span class="tip"></span>Include Networker VMWare Protection Backups?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeNetworkerVMWareProtectionBackupsImplementation" id="radio-IncludeNetworkerVMWareProtectionBackupsImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeNetworkerVMWareProtectionBackupsImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeNetworkerVMWareProtectionBackupsImplementation" id="radio-IncludeNetworkerVMWareProtectionBackupsImplementation-no"/>
+                              <label class="rad-lbl" for="radio-IncludeNetworkerVMWareProtectionBackupsImplementation-no">No</label>
+                            </p>
+                            <div class="hideNoIncludeNetworkerVMWareProtectionBackupsImplementation">
+                              <p>
+                                <label for="input-VirtualMachineClientsImplementation">
+                                  <span class="tip"></span>
+                                  # of Virtual Machine Clients to be Backed Up using VMWare VADP
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-VirtualMachineClientsImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <div class="hideYesIncludeNetworkerVMWareProtectionBackupsImplementation">
+                              <p>
+                                <label for="input-VMWareBackupAppliancesImplementation">
+                                  <span class="tip"></span>
+                                  # of VMWare Backup Appliances
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-VMWareBackupAppliancesImplementation" class="text integerOnly"/>
+                              </p>
+                              <p>
+                                <label for="input-ExternalNetworkerVMWareProtectionAppliancImplementation">
+                                  <span class="tip"></span>
+                                  # of external Networker VMWare Protection Applianc
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-ExternalNetworkerVMWareProtectionAppliancImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="hideSnapshotManagementImplementation">
+                            <p>
+                              <label for="input-NetworkerSnapshotManagementApplicationHostsImplementation">
+                                <span class="tip"></span>
+                                # of Networker Snapshot Management Application Hosts
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerSnapshotManagementApplicationHostsImplementation" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-NetworkerSnapshotManagementMountHostsImplementation">
+                                <span class="tip"></span>
+                                # of Networker Snapshot Management Mount Hosts
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NetworkerSnapshotManagementMountHostsImplementation" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-EMCDiskArraysToBeBackedUpImplementation">
+                                <span class="tip"></span>
+                                # of EMC Disk Arrays to be backed up with Networker Snapshot Management
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-EMCDiskArraysToBeBackedUpImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideNASImplementation">
+                            <p>
+                              <label for="input-NASDataMoversToBeBackedUpImplementation">
+                                <span class="tip"></span>
+                                # of NAS DataMovers to be Backed Up via NDMP
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-NASDataMoversToBeBackedUpImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="hideNetworkerFileSystemClientBackupsImplementation">
+                          <p>
+                            <label><span class="tip"></span>Networker Firewall Support?</label>
+                            <span class="sep">:</span>
+                            <input type="radio" name="radio-NetworkerFirewallSupportImplementation" id="radio-NetworkerFirewallSupportImplementation-yes"/>
+                            <label class="rad-lbl rad-lbl-first" for="radio-NetworkerFirewallSupportImplementation-yes">Yes</label>
+                            <input type="radio" name="radio-NetworkerFirewallSupportImplementation" id="radio-NetworkerFirewallSupportImplementation-no"/>
+                            <label class="rad-lbl" for="radio-NetworkerFirewallSupportImplementation-no">No</label>
+                          </p>
+                          <p>
+                            <label for="input-NetworkerClientsImplementation">
+                              <span class="tip"></span>
+                              # of Networker Clients (Windows / Unix / Linux)
+                            </label>
+                            <span class="sep">:</span>
+                            <input type="text" id="input-NetworkerClientsImplementation" class="text integerOnly"/>
+                          </p>
+                          <p>
+                            <label for="input-NetworkerClusterClientConnectionsImplementation">
+                              <span class="tip"></span>
+                              # of Networker Cluster Client Connections
+                            </label>
+                            <span class="sep">:</span>
+                            <input type="text" id="input-NetworkerClusterClientConnectionsImplementation" class="text integerOnly"/>
+                          </p>
+                        </div>
+                        <div class="hideNetworkerApplicationBackupsImplementation">
+                          <div class="check-set check-set-inline no-padding js-transform-set">
+                            <p>
+                              <label>
+                                <span class="tip"></span>
+                                Select Applications to be Backed Up
+                              </label>
+                              <span class="sep">:</span>
+                            </p>
+                            <div>
+                              <input type="checkbox" id="chk-MicrosoftSQLImplementation" name="chk-ApplicationsToBeBackedUpImplementation" checked="checked"/>
+                              <label class="chk-lbl">Microsoft SQL</label>
+                              <input type="checkbox" id="chk-MicrosoftExchangeImplementation" name="chk-ApplicationsToBeBackedUpImplementation" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">Microsoft Exchange</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-MicrosoftSharepointImplementation" name="chk-ApplicationsToBeBackedUpImplementation" checked="checked"/>
+                              <label class="chk-lbl">Microsoft Sharepoint</label>
+                              <input type="checkbox" id="chk-MicrosoftHyperVImplementation" name="chk-ApplicationsToBeBackedUpImplementation" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">Microsoft Hyper-V</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-OracleImplementation" name="chk-ApplicationsToBeBackedUpImplementation" checked="checked"/>
+                              <label class="chk-lbl">Oracle</label>
+                              <input type="checkbox" id="chk-MySQLImplementation" name="chk-ApplicationsToBeBackedUpImplementation" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">MySQL</label>
+                            </div>
+                            <div>
+                              <input type="checkbox" id="chk-LotusNotesImplementation" name="chk-ApplicationsToBeBackedUpImplementation" checked="checked"/>
+                              <label class="chk-lbl">Lotus Notes</label>
+                              <input type="checkbox" id="chk-SAPImplementation" name="chk-ApplicationsToBeBackedUpImplementation" checked="checked"/>
+                              <label class="chk-lbl chk-lbl-width">SAP</label>
+                            </div>
+                          </div>
+                          <div class="hideMicrosoftSQLImplementation">
+                            <p>
+                              <label><span class="tip"></span>Include EMC VSS Hardware Provider</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeEMCVSSHardwareProviderImplementation" id="radio-IncludeEMCVSSHardwareProviderImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeEMCVSSHardwareProviderImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeEMCVSSHardwareProviderImplementation" id="radio-IncludeEMCVSSHardwareProviderImplementation-no"/>
+                              <label class="rad-lbl" for="radio-IncludeEMCVSSHardwareProviderImplementation-no">No</label>
+                            </p>
+                            <div class="hideIncludeEMCVSSHardwareProviderImplementation">
+                              <p>
+                                <label for="input-NetworkerModiuleForMicrosoftProxyNodesImplementation">
+                                  <span class="tip"></span>
+                                  # of Networker Modiule for Microsoft Proxy Nodes
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-NetworkerModiuleForMicrosoftProxyNodesImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <p>
+                              <label><span class="tip"></span>Include Microsoft SQL Server Cluster?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeMicrosoftSQLServerClusterImplementation" id="radio-IncludeMicrosoftSQLServerClusterImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeMicrosoftSQLServerClusterImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeMicrosoftSQLServerClusterImplementation" id="radio-IncludeMicrosoftSQLServerClusterImplementation-no"/>
+                              <label class="rad-lbl" for="radio-IncludeMicrosoftSQLServerClusterImplementation-no">No</label>
+                            </p>
+                            <div class="hideIncludeMicrosoftSQLServerClusterImplementation">
+                              <p>
+                                <label for="input-MicrosoftSQLServerClusterNodesImplementation">
+                                  <span class="tip"></span>
+                                  # of Microsoft SQL Server Cluster Nodes
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-MicrosoftSQLServerClusterNodesImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <p>
+                              <label for="input-MicrosoftSQLServersImplementation">
+                                <span class="tip"></span>
+                                # of Microsoft SQL Servers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-MicrosoftSQLServersImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideMicrosoftExchangeImplementation">
+                            <p>
+                              <label><span class="tip"></span>Include EMC VSS Hardware Provider</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeEMCVSSHardwareProviderMicrosoftExchangeImplementation" id="radio-IncludeEMCVSSHardwareProviderMicrosoftExchangeImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeEMCVSSHardwareProviderMicrosoftExchangeImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeEMCVSSHardwareProviderMicrosoftExchangeImplementation" id="radio-IncludeEMCVSSHardwareProviderMicrosoftExchangeImplementation-no"/>
+                              <label class="rad-lbl" for="radio-IncludeEMCVSSHardwareProviderMicrosoftExchangeImplementation-no">No</label>
+                            </p>
+                            <div class="hideIncludeEMCVSSHardwareProviderMicrosoftExchangeImplementation">
+                              <p>
+                                <label for="input-NetworkerModiuleForMicrosoftProxyNodesMicrosoftExchangeImplementation">
+                                  <span class="tip"></span>
+                                  # of Networker Modiule for Microsoft Proxy Nodes
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-NetworkerModiuleForMicrosoftProxyNodesMicrosoftExchangeImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <p>
+                              <label><span class="tip"></span>Do you want Exchange Granular Backups to Be Implemented?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-ExchangeGranularBackupsToBeImplementedMicrosoftExchangeImplementation" id="radio-ExchangeGranularBackupsToBeImplementedMicrosoftExchangeImplementation-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-ExchangeGranularBackupsToBeImplementedMicrosoftExchangeImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-ExchangeGranularBackupsToBeImplementedMicrosoftExchangeImplementation" id="radio-ExchangeGranularBackupsToBeImplementedMicrosoftExchangeImplementation-no"/>
+                              <label class="rad-lbl" for="radio-ExchangeGranularBackupsToBeImplementedMicrosoftExchangeImplementation-no">No</label>
+                            </p>
+                            <p>
+                              <label><span class="tip"></span>Include Clustered Exchange Servers?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeClusteredExchangeServersMicrosoftExchangeImplementation" id="radio-IncludeClusteredExchangeServersMicrosoftExchangeImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeClusteredExchangeServersMicrosoftExchangeImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeClusteredExchangeServersMicrosoftExchangeImplementation" id="radio-IncludeClusteredExchangeServersMicrosoftExchangeImplementation-no"/>
+                              <label class="rad-lbl" for="radio-IncludeClusteredExchangeServersMicrosoftExchangeImplementation-no">No</label>
+                            </p>
+                            <p>
+                              <label for="input-MicrosoftExchangeMailboxServersMicrosoftExchangeImplementation">
+                                <span class="tip"></span>
+                                # of Microsoft Exchange Mailbox Servers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-MicrosoftExchangeMailboxServersMicrosoftExchangeImplementation" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-MicrosoftExchangeDatabaseStoresMicrosoftExchangeImplementation">
+                                <span class="tip"></span>
+                                # of Microsoft Exchange Database Stores
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-MicrosoftExchangeDatabaseStoresMicrosoftExchangeImplementation" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-AverageSizeInGBOfExchangeDatabaseStoresMicrosoftExchangeImplementation">
+                                <span class="tip"></span>
+                                Average Size in GB of Exchange Database Stores
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-AverageSizeInGBOfExchangeDatabaseStoresMicrosoftExchangeImplementation" class="text integerOnly"/>
+                            </p>
+                            <div class="hideIncludeClusteredExchangeServersMicrosoftExchangeImplementation">
+                              <p>
+                                <label for="input-ExchangeClusterNodesIncludedInThisEngagementMicrosoftExchangeImplementation">
+                                  <span class="tip"></span>
+                                  # of Exchange Cluster Nodes Included in this Engagement
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-ExchangeClusterNodesIncludedInThisEngagementMicrosoftExchangeImplementation" class="text integerOnly"/>
+                              </p>
+                              <p>
+                                <label for="input-CCRClustersIncludedInThisEngagementMicrosoftExchangeImplementation">
+                                  <span class="tip"></span>
+                                  # of CCR Clusters Included in this Engagement
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-CCRClustersIncludedInThisEngagementMicrosoftExchangeImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="hideMicrosoftSharepointImplementation">
+                            <p>
+                              <label><span class="tip"></span>Include EMC VSS Hardware Provider</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeEMCVSSHardwareProviderMicrosoftSharepointImplementation" id="radio-IncludeEMCVSSHardwareProviderMicrosoftSharepointImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeEMCVSSHardwareProviderMicrosoftSharepointImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeEMCVSSHardwareProviderMicrosoftSharepointImplementation" id="radio-IncludeEMCVSSHardwareProviderMicrosoftSharepointImplementation-no"/>
+                              <label class="rad-lbl" for="radio-IncludeEMCVSSHardwareProviderMicrosoftSharepointImplementation-no">No</label>
+                            </p>
+                            <div class="hideIncludeEMCVSSHardwareProviderMicrosoftSharepointImplementation">
+                              <p>
+                                <label for="input-NetworkerModiuleForMicrosoftProxyNodesMicrosoftSharepointImplementation">
+                                  <span class="tip"></span>
+                                  # of Networker Modiule for Microsoft Proxy Nodes
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-NetworkerModiuleForMicrosoftProxyNodesMicrosoftSharepointImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <p>
+                              <label><span class="tip"></span>Include Microsoft SQL Server Cluster?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeMicrosoftSQLServerClusterMicrosoftSharepointImplementation" id="radio-IncludeMicrosoftSQLServerClusterMicrosoftSharepointImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeMicrosoftSQLServerClusterMicrosoftSharepointImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeMicrosoftSQLServerClusterMicrosoftSharepointImplementation" id="radio-IncludeMicrosoftSQLServerClusterMicrosoftSharepointImplementation-no"/>
+                              <label class="rad-lbl" for="radio-IncludeMicrosoftSQLServerClusterMicrosoftSharepointImplementation-no">No</label>
+                            </p>
+                            <p>
+                              <label><span class="tip"></span>Include Granular SharePoint Backups?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeGranularSharePointBackupsMicrosoftSharepointImplementation" id="radio-IncludeGranularSharePointBackupsMicrosoftSharepointImplementation-yes"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeGranularSharePointBackupsMicrosoftSharepointImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeGranularSharePointBackupsMicrosoftSharepointImplementation" id="radio-IncludeGranularSharePointBackupsMicrosoftSharepointImplementation-no"/>
+                              <label class="rad-lbl" for="radio-IncludeGranularSharePointBackupsMicrosoftSharepointImplementation-no">No</label>
+                            </p>
+                            <p>
+                              <label><span class="tip"></span>Include SharePoint Distrbuted Environment?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeSharePointDistrbutedEnvironmentMicrosoftSharepointImplementation" id="radio-IncludeSharePointDistrbutedEnvironmentMicrosoftSharepointImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeSharePointDistrbutedEnvironmentMicrosoftSharepointImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeSharePointDistrbutedEnvironmentMicrosoftSharepointImplementation" id="radio-IncludeSharePointDistrbutedEnvironmentMicrosoftSharepointImplementation-no"/>
+                              <label class="rad-lbl" for="radio-IncludeSharePointDistrbutedEnvironmentMicrosoftSharepointImplementation-no">No</label>
+                            </p>
+                            <div class="hideIncludeMicrosoftSQLServerClusterMicrosoftSharepointImplementation">
+                              <p>
+                                <label for="input-MicrosoftSQLServerClusterNodesMicrosoftSharepointImplementation">
+                                  <span class="tip"></span>
+                                  # of Microsoft SQL Server Cluster Nodes
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-MicrosoftSQLServerClusterNodesMicrosoftSharepointImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <p>
+                              <label for="input-MicrosoftSQLServersMicrosoftSharepointImplementation">
+                                <span class="tip"></span>
+                                # of Microsoft SQL Servers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-MicrosoftSQLServersMicrosoftSharepointImplementation" class="text integerOnly"/>
+                            </p>
+                            <div class="hideIncludeSharePointDistrbutedEnvironmentMicrosoftSharepointImplementation">
+                              <p>
+                                <label for="input-PhysicalServersInSharePointEnvironmentMicrosoftSharepointImplementation">
+                                  <span class="tip"></span>
+                                  # of Physical Servers in SharePoint Environment
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-PhysicalServersInSharePointEnvironmentMicrosoftSharepointImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <p>
+                              <label for="input-SharePointFarmsMicrosoftSharepointImplementation">
+                                <span class="tip"></span>
+                                # of SharePoint Farms
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-SharePointFarmsMicrosoftSharepointImplementation" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-SharePointWebApplicationsMicrosoftSharepointImplementation">
+                                <span class="tip"></span>
+                                # of SharePoint Web Applications
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-SharePointWebApplicationsMicrosoftSharepointImplementation" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-SharePointSitesMicrosoftSharepointImplementation">
+                                <span class="tip"></span>
+                                # of SharePoint Sites
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-SharePointSitesMicrosoftSharepointImplementation" class="text integerOnly"/>
+                            </p>
+                            <p>
+                              <label for="input-SharePointSubSitesMicrosoftSharepointImplementation">
+                                <span class="tip"></span>
+                                # of SharePoint Sub-Sites
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-SharePointSubSitesMicrosoftSharepointImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideMicrosoftHyperVImplementation">
+                            <p>
+                              <label><span class="tip"></span>Include EMC VSS Hardware Provider</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IncludeEMCVSSHardwareProviderMicrosoftHyperVImplementation" id="radio-IncludeEMCVSSHardwareProviderMicrosoftHyperVImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IncludeEMCVSSHardwareProviderMicrosoftHyperVImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-IncludeEMCVSSHardwareProviderMicrosoftHyperVImplementation" id="radio-IncludeEMCVSSHardwareProviderMicrosoftHyperVImplementation-no"/>
+                              <label class="rad-lbl" for="radio-IncludeEMCVSSHardwareProviderMicrosoftHyperVImplementation-no">No</label>
+                            </p>
+                            <div class="hideIncludeEMCVSSHardwareProviderMicrosoftHyperVImplementation">
+                              <p>
+                                <label for="input-NetworkerModiuleForMicrosoftProxyNodesMicrosoftHyperVImplementation">
+                                  <span class="tip"></span>
+                                  # of Networker Modiule for Microsoft Proxy Nodes
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-NetworkerModiuleForMicrosoftProxyNodesMicrosoftHyperVImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <p>
+                              <label><span class="tip"></span>Are any of the Hyper-V Environments Clustered?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-HyperVEnvironmentsClusteredMicrosoftHyperVImplementation" id="radio-HyperVEnvironmentsClusteredMicrosoftHyperVImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-HyperVEnvironmentsClusteredMicrosoftHyperVImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-HyperVEnvironmentsClusteredMicrosoftHyperVImplementation" id="radio-HyperVEnvironmentsClusteredMicrosoftHyperVImplementation-no"/>
+                              <label class="rad-lbl" for="radio-HyperVEnvironmentsClusteredMicrosoftHyperVImplementation-no">No</label>
+                            </p>
+                            <p>
+                              <label><span class="tip"></span>Will NMM be configured to backup an individual Hyper-V Machines?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-WillNMMBeConfiguredToBackupMicrosoftHyperVImplementation" id="radio-WillNMMBeConfiguredToBackupMicrosoftHyperVImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-WillNMMBeConfiguredToBackupMicrosoftHyperVImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-WillNMMBeConfiguredToBackupMicrosoftHyperVImplementation" id="radio-WillNMMBeConfiguredToBackupMicrosoftHyperVImplementation-no"/>
+                              <label class="rad-lbl" for="radio-WillNMMBeConfiguredToBackupMicrosoftHyperVImplementation-no">No</label>
+                            </p>
+                            <div class="hideWillNMMBeConfiguredToBackupMicrosoftHyperVImplementation">
+                              <p>
+                                <label for="input-MicrosoftHyperVServersToBeBackedUpWithNMMMicrosoftHyperVImplementation">
+                                  <span class="tip"></span>
+                                  # of Microsoft Hyper-V Servers to be Backed Up with NMM
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-MicrosoftHyperVServersToBeBackedUpWithNMMMicrosoftHyperVImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <div class="hideHyperVEnvironmentsClusteredMicrosoftHyperVImplementation">
+                              <p>
+                                <label for="input-PhysicalServersInHyperVClusterMicrosoftHyperVImplementation">
+                                  <span class="tip"></span>
+                                  # of physical servers in Hyper-V Cluster
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-PhysicalServersInHyperVClusterMicrosoftHyperVImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <p>
+                              <label for="input-HyperVVirtualMachinesToBeBackedUpIndividuallyMicrosoftHyperVImplementation">
+                                <span class="tip"></span>
+                                # of Hyper-V virtual machines to be backed up individually
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-HyperVVirtualMachinesToBeBackedUpIndividuallyMicrosoftHyperVImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideOracleImplementation">
+                            <p>
+                              <label><span class="tip"></span>Are there any clustered Oracle Servers to be backed up</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-ClusteredOracleServersToBeBackedUpOracleImplementation" id="radio-ClusteredOracleServersToBeBackedUpOracleImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-ClusteredOracleServersToBeBackedUpOracleImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-ClusteredOracleServersToBeBackedUpOracleImplementation" id="radio-ClusteredOracleServersToBeBackedUpOracleImplementation-no"/>
+                              <label class="rad-lbl" for="radio-ClusteredOracleServersToBeBackedUpOracleImplementation-no">No</label>
+                            </p>
+                            <div class="hideNoClusteredOracleServersToBeBackedUpOracleImplementation">
+                              <p>
+                                <label for="input-PhysicalServersInOracleEnvironmentOracleImplementation">
+                                  <span class="tip"></span>
+                                  # of Physical Servers in Oracle Environment
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-PhysicalServersInOracleEnvironmentOracleImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <p>
+                              <label for="input-OracleDatabaseServersForRMANBackupOracleImplementation">
+                                <span class="tip"></span>
+                                # of Oracle Database Servers for RMAN Backup
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-OracleDatabaseServersForRMANBackupOracleImplementation" class="text integerOnly"/>
+                            </p>
+                            <div class="hideYesClusteredOracleServersToBeBackedUpOracleImplementation">
+                              <p>
+                                <label for="input-OracleDatabasesForBackupConfigurationOracleImplementation">
+                                  <span class="tip"></span>
+                                  # of Oracle Databases for Backup Configuration
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-OracleDatabasesForBackupConfigurationOracleImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="hideMySQLImplementation">
+                            <p>
+                              <label><span class="tip"></span>MySql Environment Clustered?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-MySqlEnvironmentClusteredMySQLImplementation" id="radio-MySqlEnvironmentClusteredMySQLImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-MySqlEnvironmentClusteredMySQLImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-MySqlEnvironmentClusteredMySQLImplementation" id="radio-MySqlEnvironmentClusteredMySQLImplementation-no"/>
+                              <label class="rad-lbl" for="radio-MySqlEnvironmentClusteredMySQLImplementation-no">No</label>
+                            </p>
+                            <div class="hideMySqlEnvironmentClusteredMySQLImplementation">
+                              <p>
+                                <label for="input-PhysicalServersInMySQLClusterMySQLImplementation">
+                                  <span class="tip"></span>
+                                  # of Physical Servers in MySQL Cluster
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-PhysicalServersInMySQLClusterMySQLImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <p>
+                              <label for="input-MySQLServersMySQLImplementation">
+                                <span class="tip"></span>
+                                # of MySQL Servers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-MySQLServersMySQLImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                          <div class="hideLotusNotesImplementation">
+                            <p>
+                              <label><span class="tip"></span>Are any of the Lotus Notes Applications Clustered</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-LotusNotesApplicationsClusteredLotusNotesImplementation" id="radio-LotusNotesApplicationsClusteredLotusNotesImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-LotusNotesApplicationsClusteredLotusNotesImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-LotusNotesApplicationsClusteredLotusNotesImplementation" id="radio-LotusNotesApplicationsClusteredLotusNotesImplementation-no"/>
+                              <label class="rad-lbl" for="radio-LotusNotesApplicationsClusteredLotusNotesImplementation-no">No</label>
+                            </p>
+                            <p>
+                              <label for="input-PhysicalLotusNotesServersLotusNotesImplementation">
+                                <span class="tip"></span>
+                                # of Physical Lotus Notes Servers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-PhysicalLotusNotesServersLotusNotesImplementation" class="text integerOnly"/>
+                            </p>
+                            <div class="hideLotusNotesApplicationsClusteredLotusNotesImplementation">
+                              <p>
+                                <label for="input-IBMLotusDominoInstancesLotusNotesImplementation">
+                                  <span class="tip"></span>
+                                  # of IBM Lotus Domino Instances
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-IBMLotusDominoInstancesLotusNotesImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="hideSAPImplementation">
+                            <p>
+                              <label><span class="tip"></span>Is SAP Environment Clustered?</label>
+                              <span class="sep">:</span>
+                              <input type="radio" name="radio-IsSAPEnvironmentClusteredSAPImplementation" id="radio-IsSAPEnvironmentClusteredSAPImplementation-yes" checked="checked"/>
+                              <label class="rad-lbl rad-lbl-first" for="radio-IsSAPEnvironmentClusteredSAPImplementation-yes">Yes</label>
+                              <input type="radio" name="radio-IsSAPEnvironmentClusteredSAPImplementation" id="radio-IsSAPEnvironmentClusteredSAPImplementation-no"/>
+                              <label class="rad-lbl" for="radio-IsSAPEnvironmentClusteredSAPImplementation-no">No</label>
+                            </p>
+                            <div class="hideIsSAPEnvironmentClusteredSAPImplementation">
+                              <p>
+                                <label for="input-PhysicalServersInTheSAPEnvironmentSAPImplementation">
+                                  <span class="tip"></span>
+                                  # of Physical Servers in the SAP Environment
+                                </label>
+                                <span class="sep">:</span>
+                                <input type="text" id="input-PhysicalServersInTheSAPEnvironmentSAPImplementation" class="text integerOnly"/>
+                              </p>
+                            </div>
+                            <p>
+                              <label for="input-SAPApplicationServersSAPImplementation">
+                                <span class="tip"></span>
+                                # of SAP Application Servers
+                              </label>
+                              <span class="sep">:</span>
+                              <input type="text" id="input-SAPApplicationServersSAPImplementation" class="text integerOnly"/>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="hideEMCBackupAndRecoveryManagerImplementation">
+                        </div>
+                      </div><!-- end of Networker Implementation -->
+                      <div class="hideNetworkerUpgrade">
+                        <div class="sub-title">
+                          <h5>NETWORKER UPGRADE</h5>
+                        </div>
+                        <div class="check-set check-set-inline no-padding js-transform-set">
+                          <p>
+                            <label>
+                              <span class="tip"></span>
+                              Select Networker Components to be Upgraded
+                            </label>
+                            <span class="sep">:</span>
+                          </p>
+                          <div>
+                            <input type="checkbox" id="chk-NetworkerServerNetworkerUpgrade" name="chk-NetworkerComponentsToBeUpgraded" checked="checked"/>
+                            <label class="chk-lbl">Networker Server</label>
+                            <input type="checkbox" id="chk-NetworkerStorageNodesNetworkerUpgrade" name="chk-NetworkerComponentsToBeUpgraded" checked="checked"/>
+                            <label class="chk-lbl chk-lbl-width">Networker Storage Nodes</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="chk-NetworkerClientsNetworkerUpgrade" name="chk-NetworkerComponentsToBeUpgraded" checked="checked"/>
+                            <label class="chk-lbl">Networker Clients</label>
+                            <input type="checkbox" id="chk-NetworkerManagementConsoleNetworkerUpgrade" name="chk-NetworkerComponentsToBeUpgraded" checked="checked"/>
+                            <label class="chk-lbl chk-lbl-width">Networker Management Console</label>
+                          </div>
+                        </div>
+                        <div class="hideNetworkerServerNetworkerUpgrade">
+                          <p>
+                            <label><span class="tip"></span>Select the Current Networker Version</label>
+                            <span class="sep">:</span>
+                            <input type="radio" name="radio-CurrentNetworkerVersionNetworkerUpgrade" id="radio-CurrentNetworkerVersionNetworkerUpgrade-76"/>
+                            <label class="rad-lbl rad-lbl-first" for="radio-CurrentNetworkerVersionNetworkerUpgrade-76">Networker 7.6</label>
+                            <input type="radio" name="radio-CurrentNetworkerVersionNetworkerUpgrade" id="radio-CurrentNetworkerVersionNetworkerUpgrade-80"/>
+                            <label class="rad-lbl" for="radio-CurrentNetworkerVersionNetworkerUpgrade-80">Networker 8.0</label>
+                          </p>
+                          <p>
+                            <label><span class="tip"></span>Select the Networker Version to Upgrade to</label>
+                            <span class="sep">:</span>
+                            <input type="radio" name="radio-NetworkerVersionToUpgradeToNetworkerUpgrade" id="radio-NetworkerVersionToUpgradeToNetworkerUpgrade-80"/>
+                            <label class="rad-lbl rad-lbl-first" for="radio-NetworkerVersionToUpgradeToNetworkerUpgrade-80">Networker 8.0</label>
+                            <input type="radio" name="radio-NetworkerVersionToUpgradeToNetworkerUpgrade" id="radio-NetworkerVersionToUpgradeToNetworkerUpgrade-81"/>
+                            <label class="rad-lbl" for="radio-NetworkerVersionToUpgradeToNetworkerUpgrade-81">Networker 8.1</label>
+                          </p>
+                          <p>
+                            <label><span class="tip"></span>Will the Networker Server Be Upgraded to New Hardware?</label>
+                            <span class="sep">:</span>
+                            <input type="radio" name="radio-NetworkerServerBeUpgradedToNewHardwareNetworkerUpgrade" id="radio-NetworkerServerBeUpgradedToNewHardwareNetworkerUpgrade-yes"/>
+                            <label class="rad-lbl rad-lbl-first" for="radio-NetworkerServerBeUpgradedToNewHardwareNetworkerUpgrade-yes">Yes</label>
+                            <input type="radio" name="radio-NetworkerServerBeUpgradedToNewHardwareNetworkerUpgrade" id="radio-NetworkerServerBeUpgradedToNewHardwareNetworkerUpgrade-no"/>
+                            <label class="rad-lbl" for="radio-NetworkerServerBeUpgradedToNewHardwareNetworkerUpgrade-no">No</label>
+                          </p>
+                          <p>
+                            <label for="input-NetworkerServersToBeUpgradedNetworkerUpgrade">
+                              <span class="tip"></span>
+                              # of Networker Servers to Be Upgraded
+                            </label>
+                            <span class="sep">:</span>
+                            <input type="text" id="input-NetworkerServersToBeUpgradedNetworkerUpgrade" class="text integerOnly"/>
+                          </p>
+                        </div>
+                        <div class="hideNetworkerStorageNodesNetworkerUpgrade">
+                          <p>
+                            <label for="input-NetworkerStorageNodesToBeUpgradedNetworkerUpgrade">
+                              <span class="tip"></span>
+                              # of Networker Storage Nodes to Be Upgraded
+                            </label>
+                            <span class="sep">:</span>
+                            <input type="text" id="input-NetworkerStorageNodesToBeUpgradedNetworkerUpgrade" class="text integerOnly"/>
+                          </p>
+                        </div>
+                        <div class="hideNetworkerClientsNetworkerUpgrade">
+                          <p>
+                            <label for="input-NetworkerClientsToBeUpgradedNetworkerUpgrade">
+                              <span class="tip"></span>
+                              # of Networker Clients to Be Upgraded
+                            </label>
+                            <span class="sep">:</span>
+                            <input type="text" id="input-NetworkerClientsToBeUpgradedNetworkerUpgrade" class="text integerOnly"/>
+                          </p>
+                        </div>
+                        <div class="hideNetworkerManagementConsoleNetworkerUpgrade">
+                          <p>
+                            <label for="input-NetworkerManagementConsolesToBeUpgradedNetworkerUpgrade">
+                              <span class="tip"></span>
+                              # of Networker Management Consoles to Be Upgraded
+                            </label>
+                            <span class="sep">:</span>
+                            <input type="text" id="input-NetworkerManagementConsolesToBeUpgradedNetworkerUpgrade" class="text integerOnly"/>
+                          </p>
+                        </div>
+                      </div><!-- end of Networker Upgrade -->
+                    </div><!-- end of NETWORKER -->
+
+
+
+
+
+
+
+          </div>
+                </div>
+                <!-- end of .step-content -->
+              </div>
+              <div class="btn-row">
+                <a class="button prev-btn" href="EditServiceRequestStep2.html" id="prev-btn">
+                  <span class="button-mask"><span class="btn-mid">Previous</span></span>
+                </a>
+                <a class="button" href="javascript:;" id="next-finish-step-btn">
+                  <span class="button-mask"><span class="btn-mid">Next</span></span>
+                </a>
+                <a class="button modal-fixed-trigger" href="javascript:;" id="draft-save-btn" data-modal="#request-drafted-modal">
+                  <span class="button-mask"><span class="btn-mid">Save as Draft</span></span>
+                </a>
+              </div><!-- end of .btn-row -->
+            </div>
+          </div>
+          <!-- end of .new-service-request-box -->
+        </div><!-- end of .mainContent -->
+        <div class="clear"></div>
+      </div>  <!-- end of .container -->
+    </div> <!-- end of #content -->
+
+    <div id="footer">
+      <div class="container">
+        <span class="time" id="js-loc-time"><strong>2013-02-07 15:08</strong> (GMT +00:00)</span>
+        <span class="employee"><strong>corp\smithj</strong> John Smith (Employee)</span>
+      </div>   <!-- end of .container -->
+    </div> <!-- end of #footer -->
+    <div class="info-tip">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis.</p>
+    </div>
+
+    <!-- modal -->
+    <div id="modal-bg"></div> <!-- end of #modal-bg -->
+    <div id="modal-content">
+      <div class="modal-box" id="request-drafted-modal">
+        <div class="box-top">
+          <div class="box-top-r">
+            <div class="box-top-m">
+              <h2>Submit Service Request</h2>
+              <a class="close close-modal" href="javascript:;" id="request-drafted-modal-close"></a>
+            </div>
+          </div>
+        </div>
+        <div class="box-mid">
+          <div class="box-mid-r">
+            <div class="box-content">
+              <div class="notification">
+                <img src="i/icon-success.png" alt="Confirm"/>
+                <p>The service request has been successfully saved as draft.</p>
+              </div>
+              <div class="actions">
+                <a class="button close-modal" href="javascript:;" id="request-drafted-modal-done">
+                  <span class="button-mask"><span class="btn-mid">Done</span></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-bot">
+          <div class="box-bot-r">
+            <div class="box-bot-m"></div>
+          </div>
+        </div>
+      </div><!-- end of #request-drafted-modal -->
+      <div class="modal-box" id="request-failed-modal">
+        <div class="box-top">
+          <div class="box-top-r">
+            <div class="box-top-m">
+              <h2>Validation Error</h2>
+              <a class="close close-modal" href="javascript:;"></a>
+            </div>
+          </div>
+        </div>
+        <div class="box-mid">
+          <div class="box-mid-r">
+            <div class="box-content">
+              <div class="notification">
+                <img src="i/icon-caution.png" alt="Confirm"/>
+                <p>
+                  <strong>Please provide the correct information for the following fields:</strong>
+                  <span class="error-val"><span>- </span>Infrastructure > General Information > # days of knowledge transfer</span>
+                  <span class="error-val"><span>- </span>Infrastructure > Current Environment > Who installs host software?</span>
+                  <span class="error-val"><span>- </span>Infrastructure > Current Environment > Who performs standard SAN implementation tasks?</span>
+                </p>
+              </div>
+              <div class="actions">
+                <a class="button close-modal" href="javascript:;">
+                  <span class="button-mask"><span class="btn-mid">Close</span></span>
+                </a>
+                <p class="validation-tip">Tip: The invalid fields are marked with <span>red font.</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-bot">
+          <div class="box-bot-r">
+            <div class="box-bot-m"></div>
+          </div>
+        </div>
+      </div><!-- end of #request-failed-modal -->
+    </div><!-- end of #modal-content -->
+    <ul id="submit-form-demo-links" class="demo-links">
+      <li><a href="javascript:;" id="demo-link1" data-modal="#request-failed-modal">Case 1: Validation Error</a></li>
+      <li><a href="EditServiceRequestStep4.html" id="demo-link2">Case 2: Validation Successful</a></li>
+    </ul>
+  </body>
+</html>
