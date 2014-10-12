@@ -13,6 +13,7 @@ BACKUP_FILES = """
 ~/.vimrc
 ~/.Xauthority
 ~/.xinitrc
+~/.xmodmap
 /etc/bash.bashrc
 """
 
@@ -43,6 +44,8 @@ class BackupFiles():
             print("Backuped: "+line)
 
 
+def process_output(line):
+    print(line)
 
 
 
@@ -50,6 +53,7 @@ BackupFiles.copyFiles(BACKUP_FILES)
 # print(sh.ls("/home/stevenfrog"))
 # sh.google_chrome("http://www.baidu.com")
 sh.cd(BACKUP_PATH)
-sh.git("add", "--all")
-sh.git("commit", "--amend", "--no-edit")
-sh.git("push", "origin", "master")
+sh.git("add", "--all", _out=process_output)
+sh.git("commit", "--amend", "--no-edit", _out=process_output)
+sh.git("pull", _out=process_output)
+sh.git("push", "origin", "master", _out=process_output)
