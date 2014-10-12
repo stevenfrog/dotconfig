@@ -12,6 +12,7 @@ BACKUP_FILES = """
 ~/.bashrc
 ~/.vimrc
 ~/.Xauthority
+~/.xinitrc
 /etc/bash.bashrc
 """
 
@@ -49,5 +50,6 @@ BackupFiles.copyFiles(BACKUP_FILES)
 # print(sh.ls("/home/stevenfrog"))
 # sh.google_chrome("http://www.baidu.com")
 sh.cd(BACKUP_PATH)
-sh.git("add --all")
-sh.git("commit --amend --no-edit")
+sh.git("add", "--all")
+sh.git("commit", "--amend", "--no-edit")
+sh.git("push", "origin", "master")
