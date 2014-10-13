@@ -94,11 +94,11 @@ fi
 alias ls='ls --color=auto'
 alias ll='ls -l --time-style=long-iso'
 alias lr='ls -R'                    # recursive ls
-alias la='ll -A'
-alias lx='ll -BX'                   # sort by extension
-alias lz='ll -rS'                   # sort by size
-alias lt='ll -rt'                   # sort by date
-alias lm='la | more'
+alias la='ls -A'
+alias lx='ls -BX'                   # sort by extension
+alias lz='ls -rS'                   # sort by size
+alias lt='ls -rt'                   # sort by date
+alias lm='ls -A | more'
 alias grep='grep --color=auto'
 
 #export LESS=-R
@@ -157,6 +157,7 @@ tmux_init()
     tmux new-window -n "main"           # 开启一个窗口
     tmux split-window -h                # 开启一个竖屏
     tmux split-window -v                # 开启一个横屏,并执行top命令
+    tmux resize-pane -D 15
     tmux select-pane -L
     tmux resize-pane -R 10
     tmux -2 attach-session -d           # tmux -2强制启用256color，连接已开启的tmux

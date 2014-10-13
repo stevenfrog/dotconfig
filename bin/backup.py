@@ -10,7 +10,7 @@ extFilenames = ['.classpath', '.project']
 # the exclude dirs
 extDirs = ['build', '.svn', '.settings', '__pycache__']
 # the exclude file's suffix
-extSuffixs = ['.bak', '.class', '.jar']
+extSuffixs = ['.bak', '.class', '.jar', '.pyc']
 
 HOME = "/home/stevenfrog"
 BACKUP_PATH = "/home/stevenfrog/Documents/dotconfig"
@@ -18,13 +18,16 @@ BACKUP_PATH = "/home/stevenfrog/Documents/dotconfig"
 BACKUP_FILES = """
 ~/.bashrc
 ~/.tmux.conf
-~/.vimrc
 ~/.Xauthority
 ~/.xinitrc
 ~/.xmodmap
 ~/.zshrc
 ~/bin/*
 /etc/bash.bashrc
+
+~/.vimrc
+~/.vim/bundles.vim
+~/.vim/bundle/vim-monokai/colors/monokai.vim
 """
 
 class BackupFiles():
@@ -93,4 +96,5 @@ print(sh.git("add", "--all"))
 print(sh.git("commit", "--amend", "--no-edit"))
 print(sh.git("pull"))
 print(sh.git("push", "origin", "master"))
+print("====== Backup finished ======")
 

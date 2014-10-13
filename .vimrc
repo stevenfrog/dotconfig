@@ -15,9 +15,9 @@ syntax on
 "--------
 " color scheme
 set background=dark
-let g:solarized_termcolors=256
-color solarized
-"color monokai
+"let g:solarized_termcolors=256
+"color lucius
+color monokai
 
 " highlight current line
 "au WinLeave * set nocursorline nocursorcolumn
