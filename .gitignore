@@ -1,0 +1,13 @@
+# Mac
+.DS_Store
+
+# NodeJS
+node_modules
+
+# SVN
+.svn/
+
+#Packages
+dist
+build
+bin
