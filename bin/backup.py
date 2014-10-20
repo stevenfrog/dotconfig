@@ -21,6 +21,7 @@ BACKUP_FILES = """
 ~/.Xauthority
 ~/.xinitrc
 ~/.xmodmap
+~/.Xresources
 ~/.zshrc
 ~/bin/*
 /etc/bash.bashrc
