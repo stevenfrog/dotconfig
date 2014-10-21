@@ -79,3 +79,14 @@ export ORACLE_HOME=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server
 export ORACLE_SID=XE
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH 
 export TNS_ADMIN=/usr/lib/oracle
+
+# Maven
+export M2_HOME=/usr/local/apache-maven
+export M2=$M2_HOME/bin
+export MAVEN_OPTS="-Xms256m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=256m"
+
+export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MOUDLE=fcitx
+
+

@@ -1,6 +1,26 @@
 search submission
-open_with 
 rename tc-user-setting-ff1.zip
-open_with scite
 open_with subl
 open_
+shell 
+copy
+paste_hardlink 
+paste
+open_with scite
+open_with gimp
+find angular
+open_with 
+find python
+search python
+search angular
+filter +mobi
+filter pdf
+filter 
+filter angular
+set colorscheme snow
+open_with q
+open_with sublime_text
+open_with vim
+open_with eog
+search nginx
+

@@ -9,6 +9,9 @@ filetype plugin indent on
 " enable syntax hightlight and completion
 syntax on
 
+" user system clipboard
+set clipboard=unnamed
+
 
 "--------
 " Vim UI
@@ -29,6 +32,7 @@ set incsearch
 "set highlight 	" conflict with highlight current line
 set ignorecase
 set smartcase
+set hlsearch
 
 " editor settings
 set history=1000
@@ -212,6 +216,8 @@ nnoremap <leader>v V`]
 "------------------
 " Useful Functions
 "------------------
+"
+map <c-q>  <c-v>
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k

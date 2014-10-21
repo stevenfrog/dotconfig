@@ -92,7 +92,7 @@ fi
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias ll='ls -l --time-style=long-iso'
+alias ll='ls -l --human-readable --no-group --time-style=long-iso'
 alias lr='ls -R'                    # recursive ls
 alias la='ls -A'
 alias lx='ls -BX'                   # sort by extension
@@ -120,6 +120,8 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 alias sudo='sudo '                  # make sure we can use alias in sudo
 
+alias cnpm="npm --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist"
+
 # Editor
 export EDITOR=vim
 export SVN_EDITOR=vim
@@ -141,10 +143,6 @@ man() {
         LESS_TERMCAP_us=$(printf "\e[1;32m") \
             man "$@"
     }
-
-# Add Env for Topcoder
-export TC_VM_IP=54.82.108.209
-export MAVEN_OPTS="-Xms256m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=256m"
 
 # Add colors for bash
 LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=00;91:*.tgz=00;91:*.arj=00;91:*.taz=00;91:*.lzh=00;91:*.lzma=00;91:*.tlz=00;91:*.txz=00;91:*.zip=00;91:*.z=00;91:*.Z=00;91:*.dz=00;91:*.gz=00;91:*.lz=00;91:*.xz=00;91:*.bz2=00;91:*.bz=00;91:*.tbz=00;91:*.tbz2=00;91:*.tz=00;91:*.deb=00;91:*.rpm=00;91:*.jar=00;91:*.war=00;91:*.ear=00;91:*.sar=00;91:*.rar=00;91:*.ace=00;91:*.zoo=00;91:*.cpio=00;91:*.7z=00;91:*.rz=00;91:*.jpg=01;35:*.JPG=01;35:*.jpeg=01;35:*.JPEG=01;35:*.gif=01;35:*.bmp=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.mkv=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.aac=00;35:*.au=00;35:*.flac=00;35:*.mid=00;35:*.midi=00;35:*.mka=00;35:*.mp3=00;35:*.mpc=00;35:*.ogg=00;35:*.ra=00;35:*.wav=00;35:*.m4a=00;35:*.pdf=00;96:*.doc=00;96:*.xls=00;96:*.docx=00;96:*.xlsx=00;96:*.ppt=00;96:*.csv=00;96:*.odt=00;96:*.ods=00;96:*.chm=00;96:*.epub=00;96:*.mobi=00;96:*.azw3=00;96:*.txt=00;96:*.properties=00;96:'
@@ -168,6 +166,16 @@ if which tmux 2>&1 >/dev/null; then
     test -z "$TMUX" && (tmux attach || tmux_init)
 fi
 
+# Add Env for Topcoder
+export TC_VM_IP=54.234.110.163
+
+# 用nvm管理nodejs
+export NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com
+source ~/.nvm/nvm.sh
+
 # reload nvidia config
 nvidia-settings -l
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

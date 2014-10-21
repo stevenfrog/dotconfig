@@ -11,12 +11,12 @@ REPEAT_TIMES = 3
 TIMESTAMP_FORMAT = '2014-04-26 12:30:21'
 
 NUMBER = ('int', 'bigint', 'tinyint')
-FLOAT = ('decimal')
+FLOAT = ('decimal', 'float', 'double')
 STRING = ('varchar', 'text')
 BOOLEAN = ('boolean')
 TIME = ('timestamp', 'datetime')
 BIT = ('bit')
-IGNORE_WORD = ('create', 'primary', 'foreign', 'constraint', 'references')
+IGNORE_WORD = ('create', 'primary', 'foreign', 'constraint', 'references', 'unique', 'on')
 
 
 def transfer_sql(filepath):
@@ -46,12 +46,13 @@ def transfer_sql(filepath):
     tables = {}
     tablenames = []
     flagInTable = False
-    tablename = 'ttt'
+    tablename = ''
     with open(filepath, 'r') as f1:
         line = f1.readline()
         while line:
-            lowline = line.lower()
-            if not lowline.startswith('--'):
+            lowline = line.strip().lower()
+
+            if len(lowline) != 0 and not lowline.startswith('--'):
                 start_index = lowline.find('table ')
                 if start_index > 0:
                     flagInTable = True
