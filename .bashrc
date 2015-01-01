@@ -155,7 +155,7 @@ tmux_init()
     tmux new-window -n "main"           # 开启一个窗口
     tmux split-window -h                # 开启一个竖屏
     tmux split-window -v                # 开启一个横屏,并执行top命令
-    tmux resize-pane -D 15
+    tmux resize-pane -D 10
     tmux select-pane -L
     tmux resize-pane -R 10
     tmux -2 attach-session -d           # tmux -2强制启用256color，连接已开启的tmux
@@ -167,7 +167,7 @@ if which tmux 2>&1 >/dev/null; then
 fi
 
 # Add Env for Topcoder
-export TC_VM_IP=54.234.110.163
+export TC_VM_IP=54.146.248.127
 
 # 用nvm管理nodejs
 export NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com

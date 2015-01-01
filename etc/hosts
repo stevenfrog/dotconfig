@@ -1,0 +1,26 @@
+127.0.0.1	localhost
+127.0.1.1	frog-Z87P
+
+# The following lines are desirable for IPv6 capable hosts
+#::1     ip6-localhost ip6-loopback
+#fe00::0 ip6-localnet
+#ff00::0 ip6-mcastprefix
+#ff02::1 ip6-allnodes
+#ff02::2 ip6-allrouters
+
+
+# download android sdk from google fuck cn
+203.208.46.146 dl.google.com
+203.208.46.146 dl-ssl.google.com
+74.125.237.1 dl-ssl.google.com
+
+#tc.cloud.topcoder.com   50.19.207.137
+#50.19.137.85    csfv.cloud.topcoder.com
+127.0.0.100   local.topcoder.com
+127.0.0.1     csfv.com
+
+127.0.0.1   arena.cloud.topcoder.com
+
+54.80.27.58   tc.cloud.topcoder.com farm-controller.topcoder.com arena-listener.topcoder.com
+
+
