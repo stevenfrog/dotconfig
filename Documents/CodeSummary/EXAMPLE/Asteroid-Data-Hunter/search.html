@@ -1,0 +1,140 @@
+<html>
+<head>
+
+  <!-- title -->
+  <title>Asteroid Data Hunter</title>
+
+  <!-- metatags -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  <link rel="shortcut icon" href="i/favicon.ico">
+
+  <!-- CSS -->
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css" media="all"/>
+  <link rel="stylesheet" href="../../../Lib/css/anytime.5.0.5.min.css" media="all"/>
+  <link rel="stylesheet" href="../../../Lib/css/jquery-ui.css" media="all"/>
+
+  <!-- JS -->
+  <script type="text/javascript" src="../../../Lib/js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../../../Lib/js/jquery-dateFormat.min.js"></script>
+  <script type="text/javascript" src="../../../Lib/js/anytime.5.0.5.min.js"></script>
+  <script type="text/javascript" src="../../../Lib/js/jquery-ui.js"></script>
+
+  <script type="text/javascript" src="js/comm.js"></script>
+
+  <!-- js for each page -->
+  <script type="text/javascript" src="js/data.js"></script>
+
+  <script type="text/javascript" src="js/search.js"></script>
+</head>
+
+<body>
+  <div class="all-content">
+    <div class="center-content">
+      <div class="header-content">
+        <div class="logo-section">
+          <a href="#">
+            <img src="i/logo.png"/>
+          </a>
+
+          <div class="header-title">Asteroid Data Hunter</div>
+        </div>
+        <div class="header-tabs">
+          <div class="v-seperator"></div>
+          <div class="header-tab dashboard-tab" data-page="dashboard">
+            <img src="i/dashboard-icon.png"/>
+            DASHBOARD
+          </div>
+          <div class="v-seperator"></div>
+          <div class="header-tab search-tab selected" data-page="detectionItems">
+            <img src="i/search-icon.png"/>
+            SEARCH
+          </div>
+          <div class="v-seperator"></div>
+          <div class="header-tab sky-tab" data-page="neos">
+            <img src="i/sky-icon.png"/>
+            SKY
+          </div>
+          <div class="v-seperator"></div>
+          <div class="header-tab right-seperator helper-tab" data-page="helpItems">
+            <img src="i/Help-icon.png"/>
+            HELP
+          </div>
+          <div class="v-seperator"></div>
+        </div>
+
+      </div>
+      <div class="seperator"></div>
+      <div class="main-content">
+
+        <div class="page-content search-page">
+          <div class="round-box search-page-content">
+            <div class="title-panel">
+              <img src='i/search-icon.png'/>
+              <span class="title-label">SEARCH HISTORY</span>
+
+              <div class="search-filter"></div>
+            </div>
+            <div class="seperator"></div>
+            <div class="filter-panel hidden">
+              <form method="get" modelAttribute="criteria" action="/search/detectionItems">
+                <span>DATE:</span>
+                <input name="dateStart" id="dateStart" type="text"
+                                   class="blue-input width120 dateselection"/>
+                -
+                <input name="dateEnd" id="dateEnd" type="text" class="blue-input width120 dateselection"/>
+                <span>TIME:</span>
+                <input name="timeStart" id="timeStart" type="text" class="blue-input width80"/>
+                -
+                <input name="timeEnd" id="timeEnd" type="text" class="blue-input width80"/>
+                <span>SUBMITTED:</span>
+                <select id="submittedOptions" class="width80">
+                  <option>All</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+                <a href="javascript:void(0)" class="do-filter-btn">FILTER</a>
+              </form>
+              <div class="seperator"></div>
+            </div>
+            <div class="asteroid-table-container search-list-table">
+              <div class="scrollwrapper">
+                <table>
+                  <colgroup>
+                  <col style="width:12%">
+                  <col style="width:12%">
+                  <col style="width:16%">
+                  <col style="width:14%">
+                  <col style="width:17%">
+                  <col style="width:17%">
+                  <col style="width:12%"></colgroup>
+                <thead>
+                  <tr>
+                    <th class="sortable" data-sort-by="timestamp">DATE</th>
+                    <th class="sortable" data-sort-by="time">TIME</th>
+                    <th class="sortable" data-sort-by="rightAscension">RIGHT ASCENSION</th>
+                    <th class="sortable" data-sort-by="declination">DECLINATION</th>
+                    <th class="sortable" data-sort-by="observationLatitude">OBSERVATION LAT.</th>
+                    <th class="sortable" data-sort-by="observationLongitude">OBSERVATION LNG.</th>
+                    <th class="sortable" data-sort-by="submitted">SUBMITTED?</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+            <div class="page-section"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-content"></div>
+    </div>
+    <!-- MAIN-CONTENT -->
+  </div>
+  <!-- CENTER-CONTENT -->
+</div>
+<!-- ALL-CONTENT -->
+</body>
+</html>

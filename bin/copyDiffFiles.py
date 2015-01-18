@@ -9,7 +9,7 @@ from os.path import join
 # the exclude filename
 extFilenames = ['.classpath', '.project']
 # the exclude dirs
-extDirs = ['build', '.svn', '.settings', 'bin']
+extDirs = ['build', '.svn', '.settings', 'bin', 'target']
 # the exclude file's suffix
 #extSuffixs = ['.bak', '.png', '.gif', '.jpg', '.class', '.jar']
 extSuffixs = ['.bak', '.class', '.jar']

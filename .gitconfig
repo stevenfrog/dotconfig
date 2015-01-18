@@ -7,7 +7,7 @@
 	ci = commit
 	co = checkout
 	st = status
-	diffall = /usr/local/bin/git-diffall
+	diffall = /home/stevenfrog/bin/git-diffall.sh
 [color]
 	ui = true
 [diff]

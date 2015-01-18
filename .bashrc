@@ -155,7 +155,7 @@ tmux_init()
     tmux new-window -n "main"           # 开启一个窗口
     tmux split-window -h                # 开启一个竖屏
     tmux split-window -v                # 开启一个横屏,并执行top命令
-    tmux resize-pane -D 10
+    tmux resize-pane -D 15
     tmux select-pane -L
     tmux resize-pane -R 10
     tmux -2 attach-session -d           # tmux -2强制启用256color，连接已开启的tmux
@@ -176,6 +176,18 @@ source ~/.nvm/nvm.sh
 # reload nvidia config
 nvidia-settings -l
 
+export ANDROID_HOME="/home/stevenfrog/android-sdk_r24.0.2-linux"
+export ANDROID_NDK="/home/stevenfrog/android-ndk-r10d"
+
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/usr/local/heroku/bin:$PATH:$ANDROID_NDK"
+export python3="/usr/bin/python3"
+
+### Add android tools path
+export PATH="$PATH:$HOME/android-sdk_r24.0.2-linux/platform-tools"
+
+### test
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source ~/.rvm/scripts/rvm

@@ -68,7 +68,8 @@ fi
 complete -cf sudo
 
 # Java
-export JAVA_HOME=/usr/lib/jvm/java-6-oracle
+#export JAVA_HOME=/usr/lib/jvm/java-7-oracle
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export PATH=$PATH:$JAVA_HOME/bin
 export J2SDKDIR=$JAVA_HOME
@@ -77,8 +78,11 @@ export J2REDIR=$JAVA_HOME/jre
 # Oracle
 export ORACLE_HOME=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server
 export ORACLE_SID=XE
-export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH 
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
 export TNS_ADMIN=/usr/lib/oracle
+
+# Android NDK
+#export ANDROID_NDK=/home/stevenfrog/android-ndk-r10d
 
 # Maven
 export M2_HOME=/usr/local/apache-maven

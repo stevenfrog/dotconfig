@@ -356,15 +356,26 @@ def printAlignedArray(arraies, all_column_char='', two_column_char=''):
 
     SPLIT_SPACE = 2
     max_len = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    ele_len = len(arraies[0])
+    ele_len = 0
+    for element in arraies:
+        if isinstance(element, str):
+            continue
+        ele_len = len(element)
+        if ele_len > 0:
+            break
     two_column_num = -1
     if two_column_char:
         two_column_num = ele_len // 2
     for element in arraies:
+        if isinstance(element, str):
+            continue
         for i in range(ele_len):
             max_len[i] = max(max_len[i], len(element[i]))
 
     for element in arraies:
+        if isinstance(element, str):
+            print(element)
+            continue
         for i in range(ele_len):
             if two_column_num == i:
                 print(two_column_char.ljust(1+SPLIT_SPACE), end='')

@@ -35,8 +35,14 @@ def generateCreateSQL(java_structure):
     '''
 
 
-    res  = ('CREATE TABLE %s (' % java_structure['class'][1]) + LS
-    res += '    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,' + LS
+    #res  = ('CREATE TABLE %s (' % java_structure['class'][1]) + LS
+    #res += '    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,' + LS
+
+    # For SRT HTML5
+    res = ('CREATE SEQUENCE S%s INCREMENT BY 1 START WITH 1000;' % java_structure['class'][1]) + LS
+    res += LS
+    res += ('CREATE TABLE %s (' % java_structure['class'][1]) + LS
+    res += ("    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('S%s')," % java_structure['class'][1]) + LS
 
     all_keys = []
     foreign_keys = []
@@ -54,7 +60,8 @@ def generateCreateSQL(java_structure):
             sql_var_name += '_id'
             res += ('    %s BIGINT,' %  sql_var_name)+ LS
             foreign_keys.append((var_type, sql_var_name))
-            all_keys.append((var_type, var_value, sql_var_name, 'ManyToOne'))
+            #all_keys.append((var_type, var_value, sql_var_name, 'ManyToOne'))
+            all_keys.append((var_type, var_value, sql_var_name, 'OneToOne'))
 
     for var_type, sql_var_name in foreign_keys:
         res += ('    FOREIGN KEY (%s) REFERENCES %s(id),' % (sql_var_name, var_type))+ LS
@@ -202,6 +209,7 @@ def generateORMEntity(input_values):
     TEMPLATE_ORM_ENTITY = '''
     <entity name="%(class)s" class="%(package)s.%(class)s">
         <table name="%(class)s"/>
+        <sequence-generator name="idgen" sequence-name="S%(class)s" allocation-size="1"/>
         <attributes>%(content)s
         </attributes>
     </entity>
@@ -220,7 +228,7 @@ def generateORMEntity(input_values):
     '''
 
     TEMPLATE_ORM_ONE_TO_ONE = '''
-            <one-to-one name="%(var_name)s" fetch="LAZY" orphan-removal="true">
+            <one-to-one name="%(var_name)s" fetch="LAZY">
                 <join-column name="%(table_column)s" />
                 <cascade>
                     <cascade-all/>

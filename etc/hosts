@@ -10,9 +10,9 @@
 
 
 # download android sdk from google fuck cn
-203.208.46.146 dl.google.com
-203.208.46.146 dl-ssl.google.com
-74.125.237.1 dl-ssl.google.com
+#203.208.46.146 dl.google.com
+#203.208.46.146 dl-ssl.google.com
+#74.125.237.1 dl-ssl.google.com
 
 #tc.cloud.topcoder.com   50.19.207.137
 #50.19.137.85    csfv.cloud.topcoder.com
@@ -23,4 +23,7 @@
 
 54.80.27.58   tc.cloud.topcoder.com farm-controller.topcoder.com arena-listener.topcoder.com
 
-
+# For VPN visiting China network
+202.96.155.242  51nb.com
+54.210.55.115   foundershare.com
+104.154.77.194  duxiaoyang-1.topcoder.local
