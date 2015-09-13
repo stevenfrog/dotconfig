@@ -1,0 +1,131 @@
+* [31m30bf157[m -[33m (HEAD, master)[m add folder bin/ [32m (2 seconds ago) [1;34m<stevenfrog>[m
+*   [31m3ebba8e[m -[33m (origin/master, origin/HEAD)[m Merge branch 'master' of bitbucket.org:stevenfrog/dotconfig [32m (27 minutes ago) [1;34m<stevenfrog>[m
+[32m|[m[33m\[m  
+[32m|[m *   [31m3cb55ae[m -[33m[m Merge branch 'master' of bitbucket.org:stevenfrog/dotconfig [32m (8 months ago) [1;34m<stevenfrog>[m
+[32m|[m [34m|[m[35m\[m  
+* [34m|[m [35m\[m   [31ma3e292d[m -[33m[m Merge branch 'master' of bitbucket.org:stevenfrog/dotconfig [32m (27 minutes ago) [1;34m<stevenfrog>[m
+[34m|[m[35m\[m [34m\[m [35m\[m  
+[34m|[m [35m|[m[34m/[m [35m/[m  
+[34m|[m[34m/[m[35m|[m [35m/[m   
+[34m|[m [35m|[m[35m/[m    
+[34m|[m *   [31m99313d8[m -[33m[m Merge branch 'master' of bitbucket.org:stevenfrog/dotconfig [32m (8 months ago) [1;34m<stevenfrog>[m
+[34m|[m [1;32m|[m[1;33m\[m  
+* [1;32m|[m [1;33m\[m   [31m2e0d9f3[m -[33m[m Merge branch 'master' of bitbucket.org:stevenfrog/dotconfig [32m (8 months ago) [1;34m<stevenfrog>[m
+[1;32m|[m[1;33m\[m [1;32m\[m [1;33m\[m  
+[1;32m|[m [1;33m|[m[1;32m/[m [1;33m/[m  
+[1;32m|[m[1;32m/[m[1;33m|[m [1;33m/[m   
+[1;32m|[m [1;33m|[m[1;33m/[m    
+[1;32m|[m *   [31m62cf738[m -[33m[m Merge branch 'master' of bitbucket.org:stevenfrog/dotconfig [32m (9 months ago) [1;34m<stevenfrog>[m
+[1;32m|[m [1;36m|[m[31m\[m  
+* [1;36m|[m [31m\[m   [31m40238ab[m -[33m[m Merge branch 'master' of bitbucket.org:stevenfrog/dotconfig [32m (8 months ago) [1;34m<stevenfrog>[m
+[1;36m|[m[31m\[m [1;36m\[m [31m\[m  
+[1;36m|[m [31m|[m[1;36m/[m [31m/[m  
+[1;36m|[m[1;36m/[m[31m|[m [31m/[m   
+[1;36m|[m [31m|[m[31m/[m    
+[1;36m|[m *   [31m52a0b77[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;36m|[m [34m|[m[35m\[m  
+* [34m|[m [35m\[m   [31me0ec173[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (9 months ago) [1;34m<stevenfrog>[m
+[34m|[m[35m\[m [34m\[m [35m\[m  
+[34m|[m [35m|[m[34m/[m [35m/[m  
+[34m|[m[34m/[m[35m|[m [35m/[m   
+[34m|[m [35m|[m[35m/[m    
+[34m|[m *   [31ma6bcf56[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[34m|[m [1;32m|[m[1;33m\[m  
+* [1;32m|[m [1;33m\[m   [31m4d08c78[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;32m|[m[1;33m\[m [1;32m\[m [1;33m\[m  
+[1;32m|[m [1;33m|[m[1;32m/[m [1;33m/[m  
+[1;32m|[m[1;32m/[m[1;33m|[m [1;33m/[m   
+[1;32m|[m [1;33m|[m[1;33m/[m    
+[1;32m|[m *   [31mb7af0f0[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;32m|[m [1;36m|[m[31m\[m  
+* [1;36m|[m [31m\[m   [31m551e14b[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;36m|[m[31m\[m [1;36m\[m [31m\[m  
+[1;36m|[m [31m|[m[1;36m/[m [31m/[m  
+[1;36m|[m[1;36m/[m[31m|[m [31m/[m   
+[1;36m|[m [31m|[m[31m/[m    
+[1;36m|[m *   [31m05249d5[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;36m|[m [34m|[m[35m\[m  
+* [34m|[m [35m\[m   [31m684bdda[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[34m|[m[35m\[m [34m\[m [35m\[m  
+[34m|[m [35m|[m[34m/[m [35m/[m  
+[34m|[m[34m/[m[35m|[m [35m/[m   
+[34m|[m [35m|[m[35m/[m    
+[34m|[m *   [31m947e19f[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[34m|[m [1;32m|[m[1;33m\[m  
+* [1;32m|[m [1;33m\[m   [31mf6d7492[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;32m|[m[1;33m\[m [1;32m\[m [1;33m\[m  
+[1;32m|[m [1;33m|[m[1;32m/[m [1;33m/[m  
+[1;32m|[m[1;32m/[m[1;33m|[m [1;33m/[m   
+[1;32m|[m [1;33m|[m[1;33m/[m    
+[1;32m|[m *   [31mcb9e36e[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;32m|[m [1;36m|[m[31m\[m  
+* [1;36m|[m [31m\[m   [31m8957610[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;36m|[m[31m\[m [1;36m\[m [31m\[m  
+[1;36m|[m [31m|[m[1;36m/[m [31m/[m  
+[1;36m|[m[1;36m/[m[31m|[m [31m/[m   
+[1;36m|[m [31m|[m[31m/[m    
+[1;36m|[m *   [31mfb07fc2[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;36m|[m [34m|[m[35m\[m  
+* [34m|[m [35m\[m   [31mb4f0ffd[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[34m|[m[35m\[m [34m\[m [35m\[m  
+[34m|[m [35m|[m[34m/[m [35m/[m  
+[34m|[m[34m/[m[35m|[m [35m/[m   
+[34m|[m [35m|[m[35m/[m    
+[34m|[m *   [31mc81f43e[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[34m|[m [1;32m|[m[1;33m\[m  
+* [1;32m|[m [1;33m\[m   [31md3244ff[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;32m|[m[1;33m\[m [1;32m\[m [1;33m\[m  
+[1;32m|[m [1;33m|[m[1;32m/[m [1;33m/[m  
+[1;32m|[m[1;32m/[m[1;33m|[m [1;33m/[m   
+[1;32m|[m [1;33m|[m[1;33m/[m    
+[1;32m|[m *   [31m459eb49[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;32m|[m [1;36m|[m[31m\[m  
+* [1;36m|[m [31m\[m   [31me12edf7[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;36m|[m[31m\[m [1;36m\[m [31m\[m  
+[1;36m|[m [31m|[m[1;36m/[m [31m/[m  
+[1;36m|[m[1;36m/[m[31m|[m [31m/[m   
+[1;36m|[m [31m|[m[31m/[m    
+[1;36m|[m *   [31m3f4da26[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;36m|[m [34m|[m[35m\[m  
+* [34m|[m [35m\[m   [31m6a75fee[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[34m|[m[35m\[m [34m\[m [35m\[m  
+[34m|[m [35m|[m[34m/[m [35m/[m  
+[34m|[m[34m/[m[35m|[m [35m/[m   
+[34m|[m [35m|[m[35m/[m    
+[34m|[m *   [31ma3441f4[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[34m|[m [1;32m|[m[1;33m\[m  
+* [1;32m|[m [1;33m\[m   [31m2086691[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;32m|[m[1;33m\[m [1;32m\[m [1;33m\[m  
+[1;32m|[m [1;33m|[m[1;32m/[m [1;33m/[m  
+[1;32m|[m[1;32m/[m[1;33m|[m [1;33m/[m   
+[1;32m|[m [1;33m|[m[1;33m/[m    
+[1;32m|[m *   [31m73dfae8[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;32m|[m [1;36m|[m[31m\[m  
+* [1;36m|[m [31m\[m   [31m492f525[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;36m|[m[31m\[m [1;36m\[m [31m\[m  
+[1;36m|[m [31m|[m[1;36m/[m [31m/[m  
+[1;36m|[m[1;36m/[m[31m|[m [31m/[m   
+[1;36m|[m [31m|[m[31m/[m    
+[1;36m|[m *   [31m89c45cc[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;36m|[m [34m|[m[35m\[m  
+* [34m|[m [35m\[m   [31mf129806[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[34m|[m[35m\[m [34m\[m [35m\[m  
+[34m|[m [35m|[m[34m/[m [35m/[m  
+[34m|[m[34m/[m[35m|[m [35m/[m   
+[34m|[m [35m|[m[35m/[m    
+[34m|[m *   [31m770ba1c[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[34m|[m [1;32m|[m[1;33m\[m  
+* [1;32m|[m [1;33m\[m   [31m21d90fb[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;32m|[m[1;33m\[m [1;32m\[m [1;33m\[m  
+[1;32m|[m [1;33m|[m[1;32m/[m [1;33m/[m  
+[1;32m|[m[1;32m/[m[1;33m|[m [1;33m/[m   
+[1;32m|[m [1;33m|[m[1;33m/[m    
+[1;32m|[m *   [31ma0c1319[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;32m|[m [1;36m|[m[31m\[m  
+* [1;36m|[m [31m\[m   [31m0a0915e[m -[33m[m Merge branch 'master' of github.com:stevenfrog/dotconfig [32m (11 months ago) [1;34m<stevenfrog>[m
+[1;36m|[m[31m\[m [1;36m\[m [31m\[m  
+[1;36m|[m [31m|[m[1;36m/[m [31m/[m  
+[1;36m|[m[1;36m/[m[31m|[m [31m/[m   
+[1;36m|[m [31m|[m[31m/[m    
+[1;36m|[m * [31mcde0efe[m -[33m[m Initial commit [32m (11 months ago) [1;34m<stevenfrog>[m
+* [31m8cf407d[m -[33m[m Initial commit [32m (11 months ago) [1;34m<stevenfrog>[m
