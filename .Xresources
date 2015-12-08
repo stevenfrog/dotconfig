@@ -1,7 +1,7 @@
 !look and feel
 xterm*termName: xterm-256color
-xterm*geometry: 120x60
-xterm*scrollBar: false 
+xterm*geometry: 100x50
+xterm*scrollBar: false
 xterm*rightScrollBar: true
 xterm*loginshell: true
 xterm*cursorBlink: true

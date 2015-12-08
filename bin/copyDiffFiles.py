@@ -7,9 +7,9 @@ import shutil
 from os.path import join
 
 # the exclude filename
-extFilenames = ['.classpath', '.project']
+extFilenames = ['.classpath', '.project', '.gitignore']
 # the exclude dirs
-extDirs = ['build', '.svn', '.settings', 'bin', 'target']
+extDirs = ['build', '.svn', '.git', '.settings', 'bin', 'target']
 # the exclude file's suffix
 #extSuffixs = ['.bak', '.png', '.gif', '.jpg', '.class', '.jar']
 extSuffixs = ['.bak', '.class', '.jar']

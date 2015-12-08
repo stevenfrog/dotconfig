@@ -1,0 +1,49 @@
+NodeJS 编程规范
+===
+
+
+# 这个是title
+
+_还有斜体的_
+
+__减轻的斜体__
+
+*加粗的自体*
+
+**这个的确是应该是最粗的**
+
+> 这个是引用提示
+的部分,一直可以了
+
+[wiki](https://github.com/angular-ui/ui-router/wiki)
+
+# 这还好好
+###这人呢,
+
+- haihao
+* zheyange yinggai
+* dou hai keyi l
+
+
+~~这个呢 不知道怎么样~~
+
+
+还可以这样`strenge`一下
+
+
+
+当ngRepeat结束时,触发
+@front
+
+```javascript
+directives.directive('repeatDone', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs, ngModel) {
+            if (scope.$last) {
+                scope.$eval(attrs.repeatDone);
+            }
+        }
+    };
+});
+```

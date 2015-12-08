@@ -50,7 +50,7 @@ for subtitle in d('div div.sub-title'):
             modelText = ele.attr('data-ng-model')
         elif (labelEle.parent().find('select').length > 0):
             prefix = '=SELECT='
-            ele = labelEle.parent().find('input:select')
+            ele = labelEle.parent().find('input:checkbox')
             idText = ele.attr('id')
             modelText = ele.attr('data-ng-model')
         elif (labelEle.parent().find('input:checkbox').length > 0):

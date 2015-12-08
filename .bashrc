@@ -34,7 +34,7 @@ fi
 
 export TERM=xterm-256color
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\[\033[01;33m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;35m\]@\[\033[00m\]\[\033[01;33m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[01;35m\]\$\[\033[00m\] '
 
 
 # enable color support of ls and also add handy aliases
@@ -152,12 +152,13 @@ export LS_COLORS
 tmux_init()
 {
     tmux new-session -s "frog" -d -n "other"    # 开启一个会话
+    tmux new-window -n "second"         # 开启一个窗口
     tmux new-window -n "main"           # 开启一个窗口
-    tmux split-window -h                # 开启一个竖屏
-    tmux split-window -v                # 开启一个横屏,并执行top命令
-    tmux resize-pane -D 15
-    tmux select-pane -L
-    tmux resize-pane -R 10
+    # tmux split-window -h                # 开启一个竖屏
+    # tmux split-window -v                # 开启一个横屏,并执行top命令
+    # tmux resize-pane -D 15
+    # tmux select-pane -L
+    # tmux resize-pane -R 10
     tmux -2 attach-session -d           # tmux -2强制启用256color，连接已开启的tmux
 }
 
