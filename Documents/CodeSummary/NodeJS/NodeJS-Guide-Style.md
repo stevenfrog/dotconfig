@@ -280,6 +280,7 @@ config.js
 })();
 ```
 
+[question url](http://stackoverflow.com/questions/22936865/handling-error-in-ui-routers-resolve-function-aka-statechangeerror-passing-d)
 
 ```javascript
 $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
