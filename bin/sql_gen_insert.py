@@ -8,13 +8,17 @@ LS = os.linesep
 INSERT_STR = 'INSERT INTO '
 VALUES_STR = ' VALUES('
 REPEAT_TIMES = 3
-TIMESTAMP_FORMAT = '2014-04-26 12:30:21'
+TIMESTAMP_FORMAT = "'2016-01-%02d 12:30:21'"
+# This date format is for ORACLE
+#TIMESTAMP_FORMAT = "to_date('2015-%02d-11 12:30:21', 'YYYY-MM-DD HH:MI:SS')"
+#DATE_FORMAT = "to_date('2015-%02d-11', 'YYYY-MM-DD')"
 
-NUMBER = ('int', 'bigint', 'tinyint')
+NUMBER = ('int', 'bigint', 'tinyint', 'number', 'serial')
 FLOAT = ('decimal', 'float', 'double')
-STRING = ('varchar', 'text')
+STRING = ('varchar', 'text', 'clob')
 BOOLEAN = ('boolean')
 TIME = ('timestamp', 'datetime')
+DATE = ('date')
 BIT = ('bit')
 IGNORE_WORD = ('create', 'primary', 'foreign', 'constraint', 'references', 'unique', 'on')
 
@@ -67,9 +71,10 @@ def transfer_sql(filepath):
 
                 if flagInTable:
                     cols = lowline.split()
-                    print('============', cols)
+                    #print('============', cols)
                     if not cols[0] in IGNORE_WORD:
-                        tables[tablename].append((fix_name_in_table(cols[0]), rm_type(cols[1])))
+                        tables[tablename].append((fix_name_in_table(cols[0]),
+                                                  rm_type(cols[1])))
             line = f1.readline()
 
     #print(tablenames)
@@ -96,7 +101,9 @@ def transfer_sql(filepath):
                     elif coltype in BIT:
                         sql += str((i+1) % 2) + ', '
                     elif coltype in TIME:
-                        sql += "'" + TIMESTAMP_FORMAT + "', "
+                        sql += TIMESTAMP_FORMAT % (i+1) + ", "
+                    elif coltype in DATE:
+                        sql += DATE_FORMAT % (i+1) + ", "
                     elif coltype in NUMBER:
                         sql += idx + ', '
                     elif coltype in FLOAT:

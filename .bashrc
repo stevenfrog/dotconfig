@@ -183,7 +183,7 @@ export ANDROID_NDK="/home/stevenfrog/android-ndk-r10d"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH:$ANDROID_NDK"
-export python3="/usr/bin/python3"
+export python3="/home/stevenfrog/py34/bin/python3"
 
 ### Add android tools path
 export PATH="$PATH:$HOME/android-sdk_r24.0.2-linux/platform-tools"
@@ -192,3 +192,13 @@ export PATH="$PATH:$HOME/android-sdk_r24.0.2-linux/platform-tools"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source ~/.rvm/scripts/rvm
+
+# Load Python 3.4 Environment
+source ~/py34/bin/activate
+# use `deactivate` to exist
+
+# For nvm
+export NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist
+
+# Load default nvm
+nvm use 4.2.6

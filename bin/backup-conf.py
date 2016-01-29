@@ -3,6 +3,7 @@
 import sys
 import os
 import shutil
+# http://amoffat.github.io/sh/index.html
 import sh
 import filecmp
 

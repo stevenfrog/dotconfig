@@ -6,8 +6,9 @@ import os
 
 LS = os.linesep
 DELETE_STR = 'DELETE FROM '
-#DROP_STR = 'DROP TABLE '
-DROP_STR = 'DROP TABLE IF EXISTS '
+DROP_STR = 'DROP TABLE '
+#DROP_STR = 'DROP TABLE IF EXISTS '
+DROP_SEQUENCE_STR = 'DROP SEQUENCE '
 
 
 def transfer_sql(filepath):
@@ -37,6 +38,7 @@ def transfer_sql(filepath):
     out_drop_file = open(file_drop_tables, 'w')
 
     tables = []
+    sequences = []
     try:
         for line in input_file:
             lowline = line.lower()
@@ -47,7 +49,17 @@ def transfer_sql(filepath):
                     start_index = lowline.rfind(' ', 0, end_index-1)
                     tablename = fix_db_table_name(lowline[start_index+1 : end_index])
                     tables.append(tablename)
+                start_index = lowline.find('sequence ')
+                if start_index > 0:
+                    start_index += len('sequence ')
+                    end_index = lowline.find(' ', start_index)
+                    sequencename = fix_db_table_name(lowline[start_index : end_index])
+                    sequences.append(sequencename)
         tables.reverse()
+        sequences.reverse()
+
+        for sequence in sequences:
+            out_drop_file.write(DROP_SEQUENCE_STR + sequence + ';' + LS)
         for table in tables:
             out_del_file.write(DELETE_STR + table + ';' + LS)
             out_drop_file.write(DROP_STR + table + ';' + LS)

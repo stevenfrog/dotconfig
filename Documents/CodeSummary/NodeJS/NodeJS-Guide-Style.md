@@ -3,6 +3,8 @@
 __使用`Ctrl+H`可以查找所有文件, 使用`Reg Search`还可以查找标签__
 __查找`@model|@sequen`(@表示标签), 然后范围是`CodeSummary/*.md,CodeSummary/*.js`__
 
+
+**SunShot-EnerWise-NodeJS**
 ## 经验
 
 ## `$resource`与`$http`
@@ -40,7 +42,7 @@ __查找`@model|@sequen`(@表示标签), 然后范围是`CodeSummary/*.md,CodeSu
     * `range1 || range2` 满足任意一个即可
 
 
-
+-----
 ### @validate ==================================================================
 ### 使用validator.js
 ```javascript
@@ -106,7 +108,7 @@ if (error) {
 cb();
 ```
 
-
+-----
 ### @test ==================================================================
 ### 测试nodejs controller
 ### request中的`json`表示req, res的body都是json, 会自动设置 `Content-Type: application/json`
@@ -143,9 +145,7 @@ request({
 });
 ```
 
-
-
-
+-----
 ### @$routeProvider @$stateProvider ==================================================================
 ## `$routeProvider`与`$stateProvider`
 
@@ -217,7 +217,7 @@ request({
 ## 本来`utilities`是个函数,用$resource访问了'/utilities', 他增加了一个`$promise`, 就能直接得到结果
 
 
-
+-----
 ### @angularjs @config ==================================================================
 ## 初始化Angularjs
 

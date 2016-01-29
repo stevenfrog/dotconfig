@@ -20,6 +20,13 @@ __减轻的斜体__
 # 这还好好
 ###这人呢,
 
+# `:`是对齐的意思, 第二个是中间对齐, 最后一个是向又对齐
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 - haihao
 * zheyange yinggai
 * dou hai keyi l
@@ -47,3 +54,41 @@ directives.directive('repeatDone', function() {
     };
 });
 ```
+
+权衡苦乐, 将幸福最大化
+the overall balance of pleasure over pain
+
+一句话, 功利最大化
+in a phrase, maximize utility
+
+生命的价值
+value of life
+
+1970s Ford Pinto, a car, 油箱在尾部, 追尾会爆炸
+
+功利主义 utilitaranism
+1. Fail to respect individual/minority rights
+2. Not possible to aggregate all values into $$
+
+"The quantity of pleasure being equal, pushpin is as good as poetry."
+   --Jeremy Bentham
+
+
+
+Lesson16
+park [pɑ:k] v.停放(汽车)
+traffic ['træfik] n.交通
+ticket ['tikit] n.交通法规罚款单
+note [nəut] n.便条
+area ['eəriə] n.地点
+sign [sain] n.指示牌
+reminder [ri'maində] n.指示
+fail [feil] v.无视，忘记
+obey [ə'bei] v.服从
+
+IBM Bluemix
+[Language Translation Nodejs Starter Application](https://github.com/watson-developer-cloud/language-translation-nodejs)
+If `cf target -o ORG -s SPACE`
+`cf api https://api.eu-gb.bluemix.net`
+
+console.eu-gb.bluemix.net/
