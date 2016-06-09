@@ -16,14 +16,14 @@
 
 #tc.cloud.topcoder.com   50.19.207.137
 #50.19.137.85    csfv.cloud.topcoder.com
-127.0.0.100   local.topcoder.com
-127.0.0.1     csfv.com
+#127.0.0.100   local.topcoder.com
+127.0.0.1     local.topcoder-dev.com
+192.168.10.104     local.topcoder-dev.com
 
 127.0.0.1   arena.cloud.topcoder.com
 
-54.80.27.58   tc.cloud.topcoder.com farm-controller.topcoder.com arena-listener.topcoder.com
+54.205.186.12  cockpit.cloud.topcoder.com tc.cloud.topcoder.com
 
 # For VPN visiting China network
-202.96.155.242  51nb.com
-54.210.55.115   foundershare.com
-104.154.77.194  duxiaoyang-1.topcoder.local
+#54.210.55.115   foundershare.com
+#104.154.77.194  duxiaoyang-1.topcoder.local

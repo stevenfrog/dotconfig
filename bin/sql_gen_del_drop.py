@@ -6,8 +6,8 @@ import os
 
 LS = os.linesep
 DELETE_STR = 'DELETE FROM '
-DROP_STR = 'DROP TABLE '
-#DROP_STR = 'DROP TABLE IF EXISTS '
+#DROP_STR = 'DROP TABLE '
+DROP_STR = 'DROP TABLE IF EXISTS '
 DROP_SEQUENCE_STR = 'DROP SEQUENCE '
 
 
@@ -47,13 +47,13 @@ def transfer_sql(filepath):
                 if start_index > 0:
                     end_index = lowline.rfind(' ')
                     start_index = lowline.rfind(' ', 0, end_index-1)
-                    tablename = fix_db_table_name(lowline[start_index+1 : end_index])
+                    tablename = fix_db_table_name(line[start_index+1 : end_index])
                     tables.append(tablename)
                 start_index = lowline.find('sequence ')
                 if start_index > 0:
                     start_index += len('sequence ')
                     end_index = lowline.find(' ', start_index)
-                    sequencename = fix_db_table_name(lowline[start_index : end_index])
+                    sequencename = fix_db_table_name(line[start_index : end_index])
                     sequences.append(sequencename)
         tables.reverse()
         sequences.reverse()
@@ -71,10 +71,12 @@ def transfer_sql(filepath):
 
 
 def fix_db_table_name(name):
-    if name.startswith('`') and name.endswith('`'):
-        return name[1:-1]
-    else:
-        return name
+    #if name.startswith('`') and name.endswith('`'):
+    #    return name[1:-1]
+    #else:
+    #    return name
+    return name
+
 
 
 def usage():

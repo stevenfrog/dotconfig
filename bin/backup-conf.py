@@ -15,8 +15,8 @@ extDirs = ['build', '.svn', '.git', '.settings', '__pycache__']
 extSuffixs = ['.bak', '.class', '.jar', '.pyc']
 
 HOME = "/home/stevenfrog"
-BACKUP_PATH = "/home/stevenfrog/Dropbox/dotconfig"
-BACKUP_PATH2 = "/home/stevenfrog/Nutstore/dotconfig"
+BACKUP_PATH = "/media/Disk3/Backup/dotconfig"
+#BACKUP_PATH2 = "/home/stevenfrog/Nutstore/dotconfig"
 
 BACKUP_FILES = """
 ~/.bashrc
@@ -27,6 +27,7 @@ BACKUP_FILES = """
 ~/.Xresources
 ~/.zshrc
 ~/bin/*
+~/.gimp-2.8/plug-ins/*
 /etc/bash.bashrc
 /etc/hosts
 /etc/modules
@@ -119,22 +120,24 @@ class BackupFiles():
                 self.backupFile(line)
 
 
+sh.cd(BACKUP_PATH)
+print("====== git pull ======")
+os.system("git pull")
 
 ins = BackupFiles()
 ins.copyFiles(BACKUP_FILES)
 
 sh.cd(BACKUP_PATH)
-print("====== git ======")
+print("====== git push======")
 os.system("git add --all")
-os.system("git commit --no-edit")
+os.system("git commit -am 'updated by program'")
 #sh.git("add", "--all")
 #sh.git("commit", "--amend", "--no-edit")
-os.system("git pull")
+#os.system("git pull")
 #sh.git("pull")
 os.system("git push origin master")
 # I add a mirror to github, so we can backup to both github and bitbucket
 os.system("git push github")
 print("======== Backup finished ========")
 print("=== Sync Bitbucket and Github ===")
-#print("=== Sync NutStore and Dropbox ===")
 

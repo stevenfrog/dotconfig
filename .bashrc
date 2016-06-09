@@ -168,11 +168,14 @@ if which tmux 2>&1 >/dev/null; then
 fi
 
 # Add Env for Topcoder
-export TC_VM_IP=54.146.248.127
+#export TC_VM_IP=54.146.248.127
 
 # 用nvm管理nodejs
-export NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com
+#export NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com
+export NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist
 source ~/.nvm/nvm.sh
+# Load default nvm
+nvm use 4.2.6
 
 # reload nvidia config
 nvidia-settings -l
@@ -197,8 +200,5 @@ source ~/.rvm/scripts/rvm
 source ~/py34/bin/activate
 # use `deactivate` to exist
 
-# For nvm
-export NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist
-
-# Load default nvm
-nvm use 4.2.6
+# ssh time out
+# export TMOUT=300

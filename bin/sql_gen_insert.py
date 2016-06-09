@@ -17,7 +17,7 @@ NUMBER = ('int', 'bigint', 'tinyint', 'number', 'serial')
 FLOAT = ('decimal', 'float', 'double')
 STRING = ('varchar', 'text', 'clob')
 BOOLEAN = ('boolean')
-TIME = ('timestamp', 'datetime')
+TIME = ('timestamp', 'datetime', 'date')
 DATE = ('date')
 BIT = ('bit')
 IGNORE_WORD = ('create', 'primary', 'foreign', 'constraint', 'references', 'unique', 'on')
@@ -63,7 +63,8 @@ def transfer_sql(filepath):
                     end_index = lowline.rfind(' ')
                     start_index = lowline.rfind(' ', 0, end_index-1)
                     #print('======%d    %d' %(start_index,end_index))
-                    tablename = fix_name_in_table(lowline[start_index+1 : end_index])
+                    #tablename = fix_name_in_table(line[start_index+1 : end_index])
+                    tablename = line[start_index+1 : end_index]
                     tablenames.append(tablename)
                     tables[tablename] = []
                 if lowline.strip() == ');':
@@ -71,7 +72,7 @@ def transfer_sql(filepath):
 
                 if flagInTable:
                     cols = lowline.split()
-                    #print('============', cols)
+                    print('============', cols)
                     if not cols[0] in IGNORE_WORD:
                         tables[tablename].append((fix_name_in_table(cols[0]),
                                                   rm_type(cols[1])))
